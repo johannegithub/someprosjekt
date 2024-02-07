@@ -1,0 +1,51 @@
+/* Font og farger */
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+/*
+font-family: 'Comfortaa', sans-serif;
+*/
+
+:root {
+    --background-color: white;
+    --main-font-color: black;
+
+    --primary-color: ;
+    --secondary-color:;
+    --tertiary-color: ;
+    --quanternary-color: ;
+}
+
+/* Generelt */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+main {
+    color: var(--main-font-color);
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 18px;
+}
+
+body {
+    line-height: 1.5;
+    background-color: var(--background-color);
+}
+
+a {
+    color: var(--main-font-color);
+}
+
+/* Navbar */
+
+/* Hovedside */
+
+/* Personvern side */
+
+/* Footer */
+
+/* Media Queries */
