@@ -28,3 +28,9 @@ body {
 
 
 /* Johanne */
+
+nav {
+    height : 80px;
+    width: 100%;
+    background-color: blue;
+}
