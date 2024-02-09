@@ -11,7 +11,7 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 2000); // Endre 2000 for å justere bildefrekvensen (2000 = 2 sekunder)
+  setTimeout(showSlides, 20000); // Endre 20000 for å justere bildefrekvensen (20000 = 20 sekunder)
 }
 
 function plusSlides(n) {
