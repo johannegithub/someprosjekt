@@ -15,18 +15,19 @@ main {
     position: relative;
     max-width: 800px;
     margin: auto;
-  }
-  
-  .slide {
+}
+
+.slide {
     display: none;
-  }
-  
-  img {
+}
+
+img {
     width: 100%;
     height: auto;
-  }
-  
-  .prev, .next {
+}
+
+.prev,
+.next {
     position: absolute;
     top: 50%;
     width: auto;
@@ -37,26 +38,24 @@ main {
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 100;
-  }
-  
-  .prev {
+}
+
+.prev {
     left: 0;
-  }
-  
-  .next {
+}
+
+.next {
     right: 0;
-  }
-  
+}
+
 
 
 
 /* Oda */
-.fenomen {
-    
-}
+.fenomen {}
 
 #tuttifrutti {
-    display: grid; 
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
