@@ -69,7 +69,18 @@ img {
     text-align: center;
     font-size: 50px;
     padding: 20px; 
+}
 
+#tuttifrutti h3 {
+    padding: 20px;
+    text-align: center;
+    font-size: 25px;
+
+}
+
+i {
+    font-size: 30px;
+    padding: 10px;
 }
 
 
