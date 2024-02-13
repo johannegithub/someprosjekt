@@ -56,7 +56,6 @@ img {
 .fenomen {
     padding: 20px;
     margin: 10px;
-    background-color: pink;
 }
 
 #tuttifrutti {
@@ -74,20 +73,24 @@ img {
     padding-bottom: 10px;
 }
 
-
 i {
     font-size: 30px;
     padding: 10px;
 }
 
 p {
-    padding-bottom: 10px;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+li {
+    font-size: 15px;
 }
 
 .flip-card {
     background-color: transparent;
-    width: 300px;
-    height: 400px;
+    width: 245px;
+    height: 350px;
     border: 1px solid #f1f1f1;
     perspective: 1000px;
 }
@@ -102,7 +105,6 @@ p {
 
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
-
 }
 
 .flip-card-front,
@@ -117,14 +119,13 @@ p {
 
 .flip-card-front {
     background-color: pink;
-    padding: 20px; 
+    padding: 20px;
     color: black;
 }
 
 .flip-card-back {
     background-color: pink;
     transform: rotateY(180deg);
-
 }
 
 
