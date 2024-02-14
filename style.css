@@ -146,3 +146,14 @@ label.logo {
     color : white;
     padding : 0px 100px;
 }
+
+nav ul {
+    float : right;
+    margin-right : 40px;
+}
+
+nav li {
+    display: inline-block;
+    margin : 0 8px;
+    line-height: 80px;
+}
