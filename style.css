@@ -113,19 +113,22 @@ li {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
-    /* Safari */
     backface-visibility: hidden;
 }
 
 .flip-card-front {
     background-color: pink;
-    padding: 20px;
+    padding: 50px;
     color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .flip-card-back {
     background-color: pink;
+    padding: 25px; 
     transform: rotateY(180deg);
 }
 
