@@ -133,3 +133,9 @@ li {
 
 
 /* Johanne */
+
+nav {
+    height: 80px;
+    width: 100%;
+    background: blue;
+}
