@@ -163,3 +163,7 @@ nav li {
 
 /* Madeleine */
 
+.boks {
+    display: flex;
+    
+}
