@@ -11,6 +11,39 @@ main {
     margin: auto;
 }
 
+/* Footer */
+footer {
+    background-color: var(--Bice-blue);
+    padding-bottom: 30px;
+    padding-top: 20px;
+    color: white;
+}
+
+#footer {
+    max-width: 800px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20%;
+}
+
+footer h4 {
+    font-size: larger;
+    margin-bottom: 15px;
+}
+
+footer p {
+    font-size: xx-small;
+    margin-bottom: 15px;
+}
+
+.FooterContainer {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px;
+}
+
 /* Erika */
 
 
