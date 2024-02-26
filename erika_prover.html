@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: black;
+            font-family: "Roboto Thin", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            margin: 30px;
+            font-size: 40px;
+            font-weight: 900;
+        }
+
+        .wrapper {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .slides-container {
+            height: 600px;
+            transition: 900ms cubic-bezier(0.48, 0.15, 0.18, 1);
+            position: relative;
+        }
+
+        .slide-image {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+
+        .slide-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .next-btn,
+        .prev-btn {
+            background: #ff00bf;
+            padding: 16px;
+            position: absolute;
+            top: 80%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            z-index: 100;
+            cursor: pointer;
+            transition: 400ms;
+        }
+
+        .next-btn:hover,
+        .prev-btn:hover {
+            background: #48f9ff;
+        }
+
+        .prev-btn {
+            left: 0;
+        }
+
+        .next-btn {
+            right: 0;
+        }
+
+        /* Navigation Dots */
+
+        .navigation-dots {
+            display: flex;
+            height: 32px;
+            align-items: center;
+            justify-content: center;
+            margin: 16px 0;
+        }
+
+        .single-dot {
+            background: #333;
+            height: 16px;
+            width: 16px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            margin: 0 8px;
+            cursor: pointer;
+            transition: 400ms;
+        }
+
+        .single-dot.active {
+            background: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SoME - Sosiale medier</h1>
+    <section id="story">
+        <div class="wrapper">
+            <div class="prev-btn"><i class="fas fa-chevron-left"></i></div>
+
+            <div class="slides-container">
+                <div class="slide-image">
+                    <img src="https://content.kaspersky-labs.com/fm/press-releases/05/0561c355de88a91c390d8f4e51ddc85e/processed/top-10-ways-to-stop-cyberbullying-2-q75.jpg"
+                        alt="" />
+                </div>
+
+                <div class="slide-image">
+                    <img src="https://image.klikk.no/7013282.jpg?imageId=7013282&x=5.84&y=18.83&cropw=85.82&croph=79.69&width=1920&height=1190&compression=75"
+                        alt="" />
+                </div>
+
+                <div class="slide-image">
+                    <img src="https://www.barnevakten.no/wp-content/uploads/2022/01/artikler-om-nettmobbing.jpg"
+                        alt="" />
+                </div>
+            </div>
+
+            <div class="next-btn"><i class="fas fa-chevron-right"></i></div>
+        </div>
+
+        <div class="navigation-dots"></div>
+    </section>
+
+    <script>
+        const slideImage = document.querySelectorAll(".slide-image");
+        const slidesContainer = document.querySelector(".slides-container");
+        const nextBtn = document.querySelector(".next-btn");
+        const prevBtn = document.querySelector(".prev-btn");
+        const navigationDots = document.querySelector(".navigation-dots");
+
+        let numberOfImages = slideImage.length;
+        let slideWidth = slideImage[0].clientWidth;
+        let currentSlide = 0;
+
+        // Set up the slider
+
+        function init() {
+            /*   
+              slideImage[0] = 0
+              slideImage[1] = 100%
+              slideImage[2] = 200%
+              */
+
+            slideImage.forEach((img, i) => {
+                img.style.left = i * 100 + "%";
+            });
+
+            slideImage[0].classList.add("active");
+
+            createNavigationDots();
+        }
+
+        init();
+
+        // Create navigation dots
+
+        function createNavigationDots() {
+            for (let i = 0; i < numberOfImages; i++) {
+                const dot = document.createElement("div");
+                dot.classList.add("single-dot");
+                navigationDots.appendChild(dot);
+
+                dot.addEventListener("click", () => {
+                    goToSlide(i);
+                });
+            }
+
+            navigationDots.children[0].classList.add("active");
+        }
+
+        // Next Button
+
+        nextBtn.addEventListener("click", () => {
+            if (currentSlide >= numberOfImages - 1) {
+                goToSlide(0);
+                return;
+            }
+
+            currentSlide++;
+            goToSlide(currentSlide);
+        });
+
+        // Previous Button
+
+        prevBtn.addEventListener("click", () => {
+            if (currentSlide <= 0) {
+                goToSlide(numberOfImages - 1);
+                return;
+            }
+
+            currentSlide--;
+            goToSlide(currentSlide);
+        });
+
+        // Go To Slide
+
+        function goToSlide(slideNumber) {
+            slidesContainer.style.transform =
+                "translateX(-" + slideWidth * slideNumber + "px)";
+
+            currentSlide = slideNumber;
+
+            setActiveClass();
+        }
+
+        // Set Active Class
+
+        function setActiveClass() {
+            // Set active class for Slide Image
+
+            let currentActive = document.querySelector(".slide-image.active");
+            currentActive.classList.remove("active");
+            slideImage[currentSlide].classList.add("active");
+
+            //   set active class for navigation dots
+
+            let currentDot = document.querySelector(".single-dot.active");
+            currentDot.classList.remove("active");
+            navigationDots.children[currentSlide].classList.add("active");
+        }
+    </script>
+</body>
+
+</html>
