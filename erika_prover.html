@@ -40,8 +40,8 @@
             object-fit: cover;
         }
 
-        .next-btn,
-        .prev-btn {
+        .neste_knapp,
+        .tilbake_knapp {
             background: #ff00bf;
             padding: 16px;
             position: absolute;
@@ -54,22 +54,22 @@
             transition: 400ms;
         }
 
-        .next-btn:hover,
-        .prev-btn:hover {
+        .neste_knapp:hover,
+        .tilbake_knapp:hover {
             background: #48f9ff;
         }
 
-        .prev-btn {
+        .tilbake_knapp {
             left: 0;
         }
 
-        .next-btn {
+        .neste_knapp {
             right: 0;
         }
 
         /* Navigation Dots */
 
-        .navigation-dots {
+        .navigasjonsprikker {
             display: flex;
             height: 32px;
             align-items: center;
@@ -77,7 +77,7 @@
             margin: 16px 0;
         }
 
-        .single-dot {
+        .prikkene {
             background: #333;
             height: 16px;
             width: 16px;
@@ -88,7 +88,7 @@
             transition: 400ms;
         }
 
-        .single-dot.active {
+        .prikkene.aktiv {
             background: #eee;
         }
     </style>
@@ -98,7 +98,7 @@
     <h1>SoME - Sosiale medier</h1>
     <section id="story">
         <div class="wrapper">
-            <div class="prev-btn"><i class="fas fa-chevron-left"></i></div>
+            <div class="tilbake_knapp"><i class="fas fa-chevron-left"></i></div>
 
             <div class="slides-container">
                 <div class="slide-image">
@@ -117,18 +117,18 @@
                 </div>
             </div>
 
-            <div class="next-btn"><i class="fas fa-chevron-right"></i></div>
+            <div class="neste_knapp"><i class="fas fa-chevron-right"></i></div>
         </div>
 
-        <div class="navigation-dots"></div>
+        <div class="navigasjonsprikker"></div>
     </section>
 
     <script>
         const slideImage = document.querySelectorAll(".slide-image");
         const slidesContainer = document.querySelector(".slides-container");
-        const nextBtn = document.querySelector(".next-btn");
-        const prevBtn = document.querySelector(".prev-btn");
-        const navigationDots = document.querySelector(".navigation-dots");
+        const neste_knapp = document.querySelector(".neste_knapp");
+        const tilbake_knapp = document.querySelector(".tilbake_knapp");
+        const navigasjonsPrikker = document.querySelector(".navigasjonsprikker");
 
         let numberOfImages = slideImage.length;
         let slideWidth = slideImage[0].clientWidth;
@@ -147,32 +147,32 @@
                 img.style.left = i * 100 + "%";
             });
 
-            slideImage[0].classList.add("active");
+            slideImage[0].classList.add("aktiv");
 
-            createNavigationDots();
+            lagNavigasjonsPrikker();
         }
 
         init();
 
         // Create navigation dots
 
-        function createNavigationDots() {
+        function lagNavigasjonsPrikker() {
             for (let i = 0; i < numberOfImages; i++) {
-                const dot = document.createElement("div");
-                dot.classList.add("single-dot");
-                navigationDots.appendChild(dot);
+                const prikk = document.createElement("div");
+                prikk.classList.add("prikkene");
+                navigasjonsPrikker.appendChild(prikk);
 
-                dot.addEventListener("click", () => {
+                prikk.addEventListener("click", () => {
                     goToSlide(i);
                 });
             }
 
-            navigationDots.children[0].classList.add("active");
+            navigasjonsPrikker.children[0].classList.add("aktiv");
         }
 
         // Next Button
 
-        nextBtn.addEventListener("click", () => {
+        neste_knapp.addEventListener("click", () => {
             if (currentSlide >= numberOfImages - 1) {
                 goToSlide(0);
                 return;
@@ -184,7 +184,7 @@
 
         // Previous Button
 
-        prevBtn.addEventListener("click", () => {
+        tilbake_knapp.addEventListener("click", () => {
             if (currentSlide <= 0) {
                 goToSlide(numberOfImages - 1);
                 return;
@@ -202,23 +202,23 @@
 
             currentSlide = slideNumber;
 
-            setActiveClass();
+            bestemAktivKlasse();
         }
 
         // Set Active Class
 
-        function setActiveClass() {
+        function bestemAktivKlasse() {
             // Set active class for Slide Image
 
-            let currentActive = document.querySelector(".slide-image.active");
-            currentActive.classList.remove("active");
-            slideImage[currentSlide].classList.add("active");
+            let currentActive = document.querySelector(".slide-image.aktiv");
+            currentActive.classList.remove("aktiv");
+            slideImage[currentSlide].classList.add("aktiv");
 
             //   set active class for navigation dots
 
-            let currentDot = document.querySelector(".single-dot.active");
-            currentDot.classList.remove("active");
-            navigationDots.children[currentSlide].classList.add("active");
+            let currentDot = document.querySelector(".prikkene.aktiv");
+            currentDot.classList.remove("aktiv");
+            navigasjonsPrikker.children[currentSlide].classList.add("aktiv");
         }
     </script>
 </body>
