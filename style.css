@@ -148,6 +148,7 @@ h1 {
 #tuttifrutti {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 
 #tuttifrutti h2 {
