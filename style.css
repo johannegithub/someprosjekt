@@ -157,3 +157,17 @@ nav li {
     margin : 0 8px;
     line-height: 80px;
 }
+
+nav a {
+    color : white;
+    font-size : 18px;
+    text-transform :uppercase;
+    border: 1px solid transparent;
+    padding : 7px 10px;
+    border-radius : 3px;
+}
+
+a.active,a:hover {
+    border: 1px; solid white;
+    transition: .5s;
+}
