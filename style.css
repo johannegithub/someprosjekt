@@ -136,35 +136,34 @@ li {
 /* Johanne */
 
 nav {
-    height: 80px;
-    width: 100%;
-    background: #48f9ff;
+    background-color: #333; /* Bakgrunnsfarge */
 }
 
-label.logo {
-    font-size: 35px;
-    font-weight: bold;
-    color: white;
-    padding: 0px 100px;
-}
-nav a {
-    color : white;
-    font-size : 18px;
-    text-transform :uppercase;
-    border: 1px solid transparent;
-    padding : 7px 10px;
-    border-radius : 3px;
-}
 nav ul {
-    float: right;
-    margin-right: 40px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-nav li {
-    display: inline-block;
-    margin: 0 8px;
-    line-height: 80px;
+nav ul li {
+    display: inline;
 }
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff; /* Tekstfarge */
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Farge når hover */
+}
+
+
+
+
+
 
 /* Madeleine */
 
