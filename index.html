@@ -18,29 +18,42 @@
             <ul>
                 <li><a href="universiell_utforming.html">Universiell utforming</a></li>
                 <li><a href="gdpr.html">GDPR</a></li>
-                
+                <li><a href="#">Spill</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <h1>SoME - Sosiale medier</h1>
-        <section id="story">
-            <div class="slideshow-container">
-                <div class="slide fade">
-                    <img src="https://gemini.no/wp-content/uploads/2021/05/sosiale-medier-2-foto-shutterstock-ntb.jpg"
-                        alt="Sosiale medier 1">
+    <h1>SoME - Sosiale medier</h1>
+    <section id="story">
+        <div class="wrapper">
+            <div class="prev-btn"><i class="fas fa-chevron-left"></i></div>
+
+            <div class="slides-container">
+                <div class="slide-image">
+                    <img src="https://content.kaspersky-labs.com/fm/press-releases/05/0561c355de88a91c390d8f4e51ddc85e/processed/top-10-ways-to-stop-cyberbullying-2-q75.jpg"
+                        alt="" />
                 </div>
-                <div class="slide fade">
-                    <img src="https://nettkunnskap.no/wp-content/uploads/2020/10/Venner-kjaerester-pa-sosiale-medier.jpg"
-                        alt="Sosial medier 2">
+
+                <div class="slide-image">
+                    <img src="https://image.klikk.no/7013282.jpg?imageId=7013282&x=5.84&y=18.83&cropw=85.82&croph=79.69&width=1920&height=1190&compression=75"
+                        alt="" />
                 </div>
-                <!-- Legg til flere bildeelementer etter behov -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <div class="slide-image">
+                    <img src="https://www.barnevakten.no/wp-content/uploads/2022/01/artikler-om-nettmobbing.jpg"
+                        alt="" />
+                </div>
             </div>
-            <script src="script.js"></script>
-        </section>
+
+            <div class="next-btn"><i class="fas fa-chevron-right"></i></div>
+        </div>
+
+        <div class="navigation-dots"></div>
+
+        <script src="script.js"></script>
+    </section>
+
+    <main>
 
         <section id="tuttifrutti">
             <h2>Fenomener på sosiale medier</h2>
@@ -51,7 +64,7 @@
                         <i class="fa-brands fa-square-snapchat"></i>
                     </div>
                     <div class="flip-card-back">
-                        <p> Dobbelsnap er når man sender to bilde-snapper etter hverandre.
+                        <p> <b>Dobbelsnap</b> er når man sender to bilde-snapper etter hverandre.
                             Normalt er det vanlig å kun sende en om gangen. Dermed er det utenom det vanlige dersom man
                             sender
                             to
@@ -73,7 +86,8 @@
                         <i class="fa-solid fa-mobile-screen-button"></i>
                     </div>
                     <div class="flip-card-back">
-                        <p> Halfswiping er en funksjon på snappchat hvor man kan lese chatter uten at noen ser at du har
+                        <p> <b>Halfswiping</b> er en funksjon på snappchat hvor man kan lese chatter uten at noen ser at
+                            du har
                             lest
                             den.
                             Det kalles halfswiping fordi man drar skjermen halveis til siden for å se chatten. </p>
@@ -89,7 +103,8 @@
                         <i class="fa-brands fa-facebook"></i>
                     </div>
                     <div class="flip-card-back">
-                        <p>Stalking vil i sammenheng med sosiale medier handle om å finne ut ting om en person utifra
+                        <p><b>Stalking</b> vil i sammenheng med sosiale medier handle om å finne ut ting om en person
+                            utifra
                             hva som
                             ligger
                             ute av informasjon om dem på nettet. Sosiale medier og funksjoner som ofte brukes til
@@ -113,7 +128,7 @@
                         <i class="fa-brands fa-tiktok"></i>
                     </div>
                     <div class="flip-card-back">
-                        <p> Tiktok er et sosialt medium som står for mange av trendene blant unge i dag. Skal man
+                        <p> <b>Tiktok</b> er et sosialt medium som står for mange av trendene blant unge i dag. Skal man
                             markedsføre en
                             sang i dag er det rette stedet uten tvil tiktok. </p>
                     </div>
@@ -128,7 +143,9 @@
                         <i class="fa-brands fa-snapchat"></i>
                     </div>
                     <div class="flip-card-back">
-                        <p> Ghosting er når en person slutter å åpne og svare på meldinger. </p>
+                        <p> <b>Ghosting</b> er når en person slutter å åpne og svare på meldinger. Begrepet kan brukes
+                            når man
+                            snakker om meldinger/chatter på ulike sosiale medie, ikke bare på meldinger </p>
                     </div>
                 </div>
             </div>
@@ -141,7 +158,9 @@
                         <i class="fa-solid fa-book-open"></i>
                     </div>
                     <div class="flip-card-back">
-                        <p> Reading er når man åpner snappen til noen, men ikke svarer. begrepe kan også bli brukt om
+                        <p> <b>Reading</b> er når man åpner snappen til noen, men ikke svarer. Navnet kommer av at men
+                            leser
+                            snappen. Begrepe kan også bli brukt om
                             meldinger
                         </p>
                     </div>
@@ -153,11 +172,38 @@
         <section id="spill">
 
         </section>
-
-        <footer>
-
-        </footer>
     </main>
+
+    <footer>
+        <div id="footer">
+			<div>
+				<h4>Om oss</h4>
+				<p>SoMe ...</p>
+			</div>
+			<div>
+				<h4>Kontakt oss</h4>
+				<div class="FooterContainer">
+					<i class="fa-solid fa-envelope fa-foot"></i>
+					<p>SoMe@mail.com</p>
+					<i class="fa-solid fa-phone fa-foot"></i>
+					<p>+47 123456789</p>
+					<i class="fa-solid fa-house fa-foot"></i>
+					<p>Adresse</p>
+				</div>
+			</div>
+			<div>
+				<h4>Følg oss</h4>
+				<div class="FooterContainer">
+					<i class="fa-brands fa-square-twitter fa-foot"></i>
+					<p>SoMe</p>
+					<i class="fa-brands fa-instagram fa-foot"></i>
+					<p>SoMe</p>
+					<i class="fa-brands fa-facebook fa-foot"></i>
+					<p>SoMe</p>
+				</div>
+			</div>
+		</div>
+    </footer>
 
 </body>
 

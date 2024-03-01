@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: black;
+            font-family: "Roboto Thin", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            margin: 30px;
+            font-size: 40px;
+            font-weight: 900;
+        }
+
+        .wrapper {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .slides-container {
+            height: 600px;
+            transition: 900ms cubic-bezier(0.48, 0.15, 0.18, 1);
+            position: relative;
+        }
+
+        .slide-image {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+
+        .slide-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .neste_knapp,
+        .tilbake_knapp {
+            background: #ff00bf;
+            padding: 16px;
+            position: absolute;
+            top: 80%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            z-index: 100;
+            cursor: pointer;
+            transition: 400ms;
+        }
+
+        .neste_knapp:hover,
+        .tilbake_knapp:hover {
+            background: #48f9ff;
+        }
+
+        .tilbake_knapp {
+            left: 0;
+        }
+
+        .neste_knapp {
+            right: 0;
+        }
+
+        /* Navigation Dots */
+
+        .navigasjonsprikker {
+            display: flex;
+            height: 32px;
+            align-items: center;
+            justify-content: center;
+            margin: 16px 0;
+        }
+
+        .prikkene {
+            background: #333;
+            height: 16px;
+            width: 16px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            margin: 0 8px;
+            cursor: pointer;
+            transition: 400ms;
+        }
+
+        .prikkene.aktiv {
+            background: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SoME - Sosiale medier</h1>
+    <section id="story">
+        <div class="wrapper">
+            <div class="tilbake_knapp"><i class="fas fa-chevron-left"></i></div>
+
+            <div class="slides-container">
+                <div class="slide-image">
+                    <img src="https://content.kaspersky-labs.com/fm/press-releases/05/0561c355de88a91c390d8f4e51ddc85e/processed/top-10-ways-to-stop-cyberbullying-2-q75.jpg"
+                        alt="" />
+                </div>
+
+                <div class="slide-image">
+                    <img src="https://image.klikk.no/7013282.jpg?imageId=7013282&x=5.84&y=18.83&cropw=85.82&croph=79.69&width=1920&height=1190&compression=75"
+                        alt="" />
+                </div>
+
+                <div class="slide-image">
+                    <img src="https://www.barnevakten.no/wp-content/uploads/2022/01/artikler-om-nettmobbing.jpg"
+                        alt="" />
+                </div>
+            </div>
+
+            <div class="neste_knapp"><i class="fas fa-chevron-right"></i></div>
+        </div>
+
+        <div class="navigasjonsprikker"></div>
+    </section>
+
+    <script>
+        const slideImage = document.querySelectorAll(".slide-image");
+        const slidesContainer = document.querySelector(".slides-container");
+        const neste_knapp = document.querySelector(".neste_knapp");
+        const tilbake_knapp = document.querySelector(".tilbake_knapp");
+        const navigasjonsPrikker = document.querySelector(".navigasjonsprikker");
+
+        let numberOfImages = slideImage.length;
+        let slideWidth = slideImage[0].clientWidth;
+        let currentSlide = 0;
+
+        // Set up the slider
+
+        function init() {
+            /*   
+              slideImage[0] = 0
+              slideImage[1] = 100%
+              slideImage[2] = 200%
+              */
+
+            slideImage.forEach((img, i) => {
+                img.style.left = i * 100 + "%";
+            });
+
+            slideImage[0].classList.add("aktiv");
+
+            lagNavigasjonsPrikker();
+        }
+
+        init();
+
+        // Create navigation dots
+
+        function lagNavigasjonsPrikker() {
+            for (let i = 0; i < numberOfImages; i++) {
+                const prikk = document.createElement("div");
+                prikk.classList.add("prikkene");
+                navigasjonsPrikker.appendChild(prikk);
+
+                prikk.addEventListener("click", () => {
+                    goToSlide(i);
+                });
+            }
+
+            navigasjonsPrikker.children[0].classList.add("aktiv");
+        }
+
+        // Next Button
+
+        neste_knapp.addEventListener("click", () => {
+            if (currentSlide >= numberOfImages - 1) {
+                goToSlide(0);
+                return;
+            }
+
+            currentSlide++;
+            goToSlide(currentSlide);
+        });
+
+        // Previous Button
+
+        tilbake_knapp.addEventListener("click", () => {
+            if (currentSlide <= 0) {
+                goToSlide(numberOfImages - 1);
+                return;
+            }
+
+            currentSlide--;
+            goToSlide(currentSlide);
+        });
+
+        // Go To Slide
+
+        function goToSlide(slideNumber) {
+            slidesContainer.style.transform =
+                "translateX(-" + slideWidth * slideNumber + "px)";
+
+            currentSlide = slideNumber;
+
+            bestemAktivKlasse();
+        }
+
+        // Set Active Class
+
+        function bestemAktivKlasse() {
+            // Set active class for Slide Image
+
+            let currentActive = document.querySelector(".slide-image.aktiv");
+            currentActive.classList.remove("aktiv");
+            slideImage[currentSlide].classList.add("aktiv");
+
+            //   set active class for navigation dots
+
+            let currentDot = document.querySelector(".prikkene.aktiv");
+            currentDot.classList.remove("aktiv");
+            navigasjonsPrikker.children[currentSlide].classList.add("aktiv");
+        }
+    </script>
+</body>
+
+</html>
