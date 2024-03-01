@@ -136,27 +136,40 @@ li {
 /* Johanne */
 
 nav {
-    background-color:blue; /* Bakgrunnsfarge */
+    background-color: #333;
+    display: flex;
+    justify-content: space-between; /* Plasserer elementer med like mye avstand mellom dem */
+    align-items: center;
+    padding: 10px;
 }
 
-nav ul {
+.logo a {
+    font-size: 25px;
+    margin-left: 20px;
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+}
+
+.right-sections ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    margin-right: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-nav ul li {
+.right-sections ul li {
     display: inline;
 }
 
-nav ul li a {
+.right-sections ul li a {
     display: inline-block;
     padding: 10px 20px;
     text-decoration: none;
-    color: #fff; /* Tekstfarge */
+    color: #fff;
 }
 
-nav ul li a:hover {
-    background-color: #555; /* Farge når hover */
+.right-sections ul li a:hover {
+    background-color: #555;
 }
-
