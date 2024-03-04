@@ -165,7 +165,7 @@ i {
 /* Johanne */
 
 nav {
-    background-color:#9a8c98ff ;
+    background-color:#22223bff ;
     display: flex;
     justify-content: space-between; /* Plasserer elementer med like mye avstand mellom dem */
     align-items: center;
@@ -177,7 +177,7 @@ nav {
 
 
 .logo i {
-    font-size: 20px;
+    font-size: 40px;
     margin-left: 30px;
 }
 
@@ -187,12 +187,12 @@ nav {
     color: white;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-decoration: none;
-    font-size:20px ;
+    font-size:40px ;
 }
 
 /* CSS HEX */
 --space-cadet: #22223bff;
---ultra-violet:  #22223bff;
+--ultra-violet:#4a4e69ff;
 --rose-quartz: #9a8c98ff;
 --pale-dogwood: #c9ada7ff;
 --isabelline: #f2e9e4ff;
@@ -217,5 +217,6 @@ nav {
 }
 
 .right-sections ul li a:hover {
-    background-color: #555;
+    background-color:#4a4e69ff;
+    text-decoration: underline;
 }
