@@ -30,11 +30,11 @@ h1 {
 .neste_knapp,
 .tilbake_knapp {
     background: #ff00bf;
-    padding: 16px;
+    padding: 5px;
     position: absolute;
-    top: 60%;
+    top: 80%;
     transform: translateY(-50%);
-    font-size: 20px;
+    font-size: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
     z-index: 100;
     cursor: pointer;
