@@ -28,16 +28,10 @@
             position: relative;
         }
 
-        .slide-image {
+        .slide {
             height: 100%;
             width: 100%;
             position: absolute;
-        }
-
-        .slide-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
         }
 
         .neste_knapp,
@@ -67,7 +61,7 @@
             right: 0;
         }
 
-        /* Navigation Dots */
+        /* Navigasjons Prikker */
 
         .navigasjonsprikker {
             display: flex;
@@ -140,14 +134,14 @@
             <div class="tilbake_knapp"><i class="fas fa-chevron-left"></i></div>
 
             <div class="slides-container">
-                <div class="slide-image">
+                <div class="slide">
                     <div class="mobbeoffer Guri">
                         <h2>Mobbeofferet «Guri» (24) forteller sin historie: Ber politikerne ta seg råd til å etablere et mobbeteam</h2>
                         <p>- La oss få et mobbeteam nå. Jeg har etterlyst gode, målretta tiltak mot mobbing etter at jeg selv ble et offer, sier 'Guri' (24), mor til to og opptatt av at mobbing skal og må forebygges best mulig gjennom fagkompetanse.</p>
                         <a href="https://www.telen.no/mobbeofferet-guri-24-forteller-sin-historie-ber-politikerne-ta-seg-rad-til-a-etablere-et-mobbeteam/s/5-75-430268" target="_">Les mer her.</a>
                     </div>
                 </div>
-                <div class="slide-image">
+                <div class="slide">
                     <div class="mobbeoffer jente">
                         <h2>14-åring ble mobbet på Snapchat - Håper jeg får hjelp nå</h2>
                         <p>Utfrysing og nettmobbing har lenge vært en del av hverdagen for 14-åringen fra Sandnessjøen. Nå vil hun ha hjelp.</p>
@@ -155,21 +149,21 @@
                         <a href="https://www.helg.no/nyheter/mobbing/14-aring-ble-mobbet-pa-snapchat-haper-jeg-far-hjelp-na/s/5-24-68194" target="_">Les mer her.</a>
                     </div>
                 </div>
-                <div class="slide-image">
+                <div class="slide">
                     <div class="mobbeoffer Villemo">
                         <h2>Villemo (14) hetses etter at hun sto fram som mobbeoffer</h2>
                         <p>For tre uker siden snakket Villemo Hatland (14) om mobbing foran flere tusen mennesker. Nå blir hun kalt en løgner i sosiale medier.</p>
                         <a href="https://www.vg.no/nyheter/innenriks/i/0mpgJ/villemo-sto-frem-som-mobbeoffer-naa-blir-hun-hetset-paa-nettet" target="_">Les mer her.</a>
                     </div>
                 </div>
-                <div class="slide-image">
+                <div class="slide">
                     <div class="mobbeoffer Amanda">
                         <h2>Funnet død etter nettmobbing - nå skal de ta bakpersonen</h2>
                         <p>Politiet setter inn store ressurser for å ta mobberne etter at Amanda (15) tok sitt eget liv.</p>
                         <a href="https://www.nettavisen.no/nyheter/funnet-dod-etter-nettmobbing-na-skal-de-ta-bakpersonen/s/12-95-3492718" target="_">Les mer her.</a>
                     </div>
                 </div>
-                <div class="slide-image">
+                <div class="slide">
                     <div class="mobbeoffer svenskjente">
                         <h2>Tror 13-åring tok sitt eget liv etter grov nettmobbing</h2>
                         <p>Svensk politi mistenker at trakassering og trusler ligger bak dødsfallet til en 13 år gammel jente.</p>
@@ -185,7 +179,7 @@
     </section>
 
     <script>
-        const slideImage = document.querySelectorAll(".slide-image");
+        const slideImage = document.querySelectorAll(".slide");
         const slidesContainer = document.querySelector(".slides-container");
         const neste_knapp = document.querySelector(".neste_knapp");
         const tilbake_knapp = document.querySelector(".tilbake_knapp");
@@ -271,7 +265,7 @@
         function bestemAktivKlasse() {
             // Set active class for Slide Image
 
-            let currentActive = document.querySelector(".slide-image.aktiv");
+            let currentActive = document.querySelector(".slide.aktiv");
             currentActive.classList.remove("aktiv");
             slideImage[currentSlide].classList.add("aktiv");
 
