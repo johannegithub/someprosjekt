@@ -19,6 +19,20 @@ section:nth-child(1) {
     margin-bottom: 75px;
 }
 
+.dark-mode {
+    background-color: black;
+    color:white
+}
+
+button {
+    padding:10px;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    border-radius: 10px;
+    float: right;
+}
+
 section {
     margin-bottom: 40px;
 }
@@ -83,7 +97,4 @@ i {
     border-width: medium;
 }
 
-.dark-mode {
-    background-color: black;
-    color:white
-}
+
