@@ -50,6 +50,35 @@ footer i {
 
 
 /* Oda */
+#nettmobbing {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+}
+
+.statestikk {
+    background-color: #333;
+    color: white; 
+}
+
+.statestikk h2 {
+    font-size: 60px;
+    text-align: center;
+}
+
+#nettmobbing div:nth-of-type(1) {
+    grid-column: span 2;
+}
+
+#nettmobbing div:nth-of-type(4) {
+    grid-column: span 2;
+}
+
+#nettmobbing div {
+    margin: 5px; 
+    padding: 15px; 
+}
+
+
 .fenomen {
     padding: 20px;
     margin: 10px;
