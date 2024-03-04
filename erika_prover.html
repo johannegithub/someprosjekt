@@ -17,30 +17,41 @@
             font-weight: 900;
         }
 
-        .slideshow_container {
-            width: 1250px;
-            overflow: hidden;
-            margin: auto;
+        a.active,
+        a:hover {
+            border: 1px solid white;
+            transition: .5s;
         }
 
-        .slides_container {
-            height: 530px;
+        .wrapper {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .slides-container {
+            height: 600px;
             transition: 900ms cubic-bezier(0.48, 0.15, 0.18, 1);
             position: relative;
         }
 
-        .slide {
+        .slide-image {
             height: 100%;
             width: 100%;
             position: absolute;
         }
 
-        .neste_knapp,
-        .tilbake_knapp {
+        .slide-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .next-btn,
+        .prev-btn {
             background: #ff00bf;
             padding: 16px;
             position: absolute;
-            top: 60%;
+            top: 80%;
             transform: translateY(-50%);
             font-size: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
@@ -49,22 +60,22 @@
             transition: 400ms;
         }
 
-        .neste_knapp:hover,
-        .tilbake_knapp:hover {
+        .next-btn:hover,
+        .prev-btn:hover {
             background: #48f9ff;
         }
 
-        .tilbake_knapp {
+        .prev-btn {
             left: 0;
         }
 
-        .neste_knapp {
+        .next-btn {
             right: 0;
         }
 
-        /* Navigasjons Prikker */
+        /* Navigation Dots */
 
-        .navigasjonsprikker {
+        .navigation-dots {
             display: flex;
             height: 32px;
             align-items: center;
@@ -72,7 +83,7 @@
             margin: 16px 0;
         }
 
-        .prikkene {
+        .single-dot {
             background: #333;
             height: 16px;
             width: 16px;
@@ -83,108 +94,49 @@
             transition: 400ms;
         }
 
-        .prikkene.aktiv {
+        .single-dot.active {
             background: #eee;
-        }
-
-        .mobbeoffer {
-            padding: 100px 780px 300px 120px;
-            background-size: cover;
-        }
-        
-        .mobbeoffer a {
-            color: greenyellow;
-            text-decoration: none;
-        }
-
-        .mobbeoffer a:hover {
-            color: green;
-        }
-
-        .Guri {
-            background-image: url(https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/0000/tele/2020/10/12/17/13NYH_01-01-DSC_0599.jpg?chk=A8F5B0);
-            padding: 50px 700px 400px 150px;
-        }
-
-        .norskjente {
-            background-image: url(https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/0000/helg/2015/9/15/12/1442312358820.jpg?chk=43D8DF);
-        }
-
-        .Villemo {
-            background-image: url(https://g.acdn.no/obscura/API/dynamic/r1/escenic/tr_2000_2000_s_f/0000/archive/05746/ashighaiodhguoi_s_5746354a.jpg?chk=636FC0);
-            color: white;
-        }
-
-        .Amanda {
-            background-image: url(https://imaginary.abcmedia.no/resize?force=false&width=1366&aspectratio=16:9&nocrop=false&interlace=true&url=https%3A%2F%2Fabcnyheter.drpublish.aptoma.no%2Fout%2Fimages%2Farticle%2F%2F2012%2F10%2F13%2F195126410%2F1%2Foriginal%2F2208778.jpg);
-            padding: 10px 100px 370px 820px;
-        }
-
-        .svenskjente {
-            background-image: url(https://akamai.vgc.no/v2/images/5d327971-db44-4590-ba7d-65a67f6099d3?format=auto&w=720&s=d9eb65fd2fdb17df0a3b3697752563e6df720a76);
-            color: white;
-            background-position: bottom;
         }
     </style>
 </head>
 
 <body>
     <h1>SoME - Sosiale medier</h1>
-    <section id="slideshow_m_historier">
-        <div class="slideshow_container">
-            <div class="tilbake_knapp"><i class="fas fa-chevron-left"></i></div>
+    <section id="story">
+        <div class="wrapper">
+            <div class="prev-btn"><i class="fas fa-chevron-left"></i></div>
 
-            <div class="slides_container">
-                <div class="slide">
-                    <div class="mobbeoffer Guri">
-                        <h2>Mobbeofferet «Guri» (24) forteller sin historie: Ber politikerne ta seg råd til å etablere et mobbeteam</h2>
-                        <p>- La oss få et mobbeteam nå. Jeg har etterlyst gode, målretta tiltak mot mobbing etter at jeg selv ble et offer, sier 'Guri' (24), mor til to og opptatt av at mobbing skal og må forebygges best mulig gjennom fagkompetanse.</p>
-                        <a href="https://www.telen.no/mobbeofferet-guri-24-forteller-sin-historie-ber-politikerne-ta-seg-rad-til-a-etablere-et-mobbeteam/s/5-75-430268" target="_">Les mer her.</a>
-                    </div>
+            <div class="slides-container">
+                <div class="slide-image">
+                    <img src="https://content.kaspersky-labs.com/fm/press-releases/05/0561c355de88a91c390d8f4e51ddc85e/processed/top-10-ways-to-stop-cyberbullying-2-q75.jpg"
+                        alt="" />
                 </div>
-                <div class="slide">
-                    <div class="mobbeoffer norskjente">
-                        <h2>14-åring ble mobbet på Snapchat - Håper jeg får hjelp nå</h2>
-                        <p>Utfrysing og nettmobbing har lenge vært en del av hverdagen for 14-åringen fra Sandnessjøen. Nå vil hun ha hjelp.</p>
-                        <p>– Det kan ikke bli verre enn det er.</p>
-                        <a href="https://www.helg.no/nyheter/mobbing/14-aring-ble-mobbet-pa-snapchat-haper-jeg-far-hjelp-na/s/5-24-68194" target="_">Les mer her.</a>
-                    </div>
+
+                <div class="slide-image">
+                    <img src="https://image.klikk.no/7013282.jpg?imageId=7013282&x=5.84&y=18.83&cropw=85.82&croph=79.69&width=1920&height=1190&compression=75"
+                        alt="" />
                 </div>
-                <div class="slide">
-                    <div class="mobbeoffer Villemo">
-                        <h2>Villemo (14) hetses etter at hun sto fram som mobbeoffer</h2>
-                        <p>For tre uker siden snakket Villemo Hatland (14) om mobbing foran flere tusen mennesker. Nå blir hun kalt en løgner i sosiale medier.</p>
-                        <a href="https://www.vg.no/nyheter/innenriks/i/0mpgJ/villemo-sto-frem-som-mobbeoffer-naa-blir-hun-hetset-paa-nettet" target="_">Les mer her.</a>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="mobbeoffer Amanda">
-                        <h2>Funnet død etter nettmobbing - nå skal de ta bakpersonen</h2>
-                        <p>Politiet setter inn store ressurser for å ta mobberne etter at Amanda (15) tok sitt eget liv.</p>
-                        <a href="https://www.nettavisen.no/nyheter/funnet-dod-etter-nettmobbing-na-skal-de-ta-bakpersonen/s/12-95-3492718" target="_">Les mer her.</a>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="mobbeoffer svenskjente">
-                        <h2>Tror 13-åring tok sitt eget liv etter grov nettmobbing</h2>
-                        <p>Svensk politi mistenker at trakassering og trusler ligger bak dødsfallet til en 13 år gammel jente.</p>
-                        <a href="https://www.vg.no/nyheter/utenriks/i/49w36/tror-13-aaring-tok-sitt-eget-liv-etter-grov-nettmobbing" target="_">Les mer her.</a>
-                    </div>
+
+                <div class="slide-image">
+                    <img src="https://www.barnevakten.no/wp-content/uploads/2022/01/artikler-om-nettmobbing.jpg"
+                        alt="" />
                 </div>
             </div>
 
-            <div class="neste_knapp"><i class="fas fa-chevron-right"></i></div>
+            <div class="next-btn"><i class="fas fa-chevron-right"></i></div>
         </div>
 
-        <div class="navigasjonsprikker"></div>
+        <div class="navigation-dots"></div>
+
+
     </section>
 
     <script>
-        const slideImage = document.querySelectorAll(".slide");
-        const slidesContainer = document.querySelector(".slides_container");
-        const neste_knapp = document.querySelector(".neste_knapp");
-        const tilbake_knapp = document.querySelector(".tilbake_knapp");
-        const navigasjonsPrikker = document.querySelector(".navigasjonsprikker");
+        const slideImage = document.querySelectorAll(".slide-image");
+        const slidesContainer = document.querySelector(".slides-container");
+        const nextBtn = document.querySelector(".next-btn");
+        const prevBtn = document.querySelector(".prev-btn");
+        const navigationDots = document.querySelector(".navigation-dots");
 
         let numberOfImages = slideImage.length;
         let slideWidth = slideImage[0].clientWidth;
@@ -192,7 +144,7 @@
 
         // Set up the slider
 
-        function startFunksjon() {
+        function init() {
             /*   
               slideImage[0] = 0
               slideImage[1] = 100%
@@ -203,32 +155,32 @@
                 img.style.left = i * 100 + "%";
             });
 
-            slideImage[0].classList.add("aktiv");
+            slideImage[0].classList.add("active");
 
-            lagNavigasjonsPrikker();
+            createNavigationDots();
         }
 
-        startFunksjon();
+        init();
 
         // Create navigation dots
 
-        function lagNavigasjonsPrikker() {
+        function createNavigationDots() {
             for (let i = 0; i < numberOfImages; i++) {
-                const prikk = document.createElement("div");
-                prikk.classList.add("prikkene");
-                navigasjonsPrikker.appendChild(prikk);
+                const dot = document.createElement("div");
+                dot.classList.add("single-dot");
+                navigationDots.appendChild(dot);
 
-                prikk.addEventListener("click", () => {
+                dot.addEventListener("click", () => {
                     goToSlide(i);
                 });
             }
 
-            navigasjonsPrikker.children[0].classList.add("aktiv");
+            navigationDots.children[0].classList.add("active");
         }
 
         // Next Button
 
-        neste_knapp.addEventListener("click", () => {
+        nextBtn.addEventListener("click", () => {
             if (currentSlide >= numberOfImages - 1) {
                 goToSlide(0);
                 return;
@@ -240,7 +192,7 @@
 
         // Previous Button
 
-        tilbake_knapp.addEventListener("click", () => {
+        prevBtn.addEventListener("click", () => {
             if (currentSlide <= 0) {
                 goToSlide(numberOfImages - 1);
                 return;
@@ -258,23 +210,23 @@
 
             currentSlide = slideNumber;
 
-            bestemAktivKlasse();
+            setActiveClass();
         }
 
         // Set Active Class
 
-        function bestemAktivKlasse() {
+        function setActiveClass() {
             // Set active class for Slide Image
 
-            let currentActive = document.querySelector(".slide.aktiv");
-            currentActive.classList.remove("aktiv");
-            slideImage[currentSlide].classList.add("aktiv");
+            let currentActive = document.querySelector(".slide-image.active");
+            currentActive.classList.remove("active");
+            slideImage[currentSlide].classList.add("active");
 
             //   set active class for navigation dots
 
-            let currentDot = document.querySelector(".prikkene.aktiv");
-            currentDot.classList.remove("aktiv");
-            navigasjonsPrikker.children[currentSlide].classList.add("aktiv");
+            let currentDot = document.querySelector(".single-dot.active");
+            currentDot.classList.remove("active");
+            navigationDots.children[currentSlide].classList.add("active");
         }
     </script>
 </body>
