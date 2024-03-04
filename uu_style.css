@@ -63,12 +63,48 @@ h3 {
     text-shadow: 2px 2px 2px lightgrey;
 }
 
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    padding: 20px;
+    padding-top: 10px;
+    text-align: center;
+    color: black;
+}
+
 p {
     font-size: 25px;
 }
 
+.bredde_container {
+    max-width: 560px;
+}
+
+.bak {
+    display: none;
+    width: 220px;
+}
+
+.bak h4 {
+    max-width: 100px;
+    margin: auto;
+    text-align: center;
+    color: black;
+}
+
+.flipCard .foran {
+    display: none;
+}
+
+.flipCard .bak {
+    display: block;
+}
+
 i {
     padding: 45px;
+    padding-bottom: 5px;
     font-size: 115px;
     text-align: center;
 }
