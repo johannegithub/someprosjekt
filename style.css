@@ -55,9 +55,17 @@ footer i {
     grid-template-columns: 1fr 1fr; 
 }
 
+#nettmobbing p {
+    font-size: 18px; 
+}
+
 .statestikk {
     background-color: #333;
     color: white; 
+}
+
+.statestikk p {
+    font-size: 18px; 
 }
 
 .statestikk h2 {
@@ -76,6 +84,10 @@ footer i {
 #nettmobbing div {
     margin: 5px; 
     padding: 15px; 
+}
+
+#ressurser {
+    font-size: 18px; 
 }
 
 #ressurser {
