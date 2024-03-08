@@ -13,6 +13,38 @@
 </head>
 
 <body>
+    <section id="mamory-game">
+        <div class="title">
+            <h1>Memory Game!</h1>
+        </div>
+
+        <div class="instructions">
+            <h2> Instruksjoner: </h2>
+             Klikk på kortene for å flippe de. Det er om å gjøre å parre opp alle de like kortene, med færrest mulig trekk. <br>
+             Lykke til!
+         </div>
+     
+        <div class="wrapper">
+            <div class="stats-container">
+                <div id="moves-count"></div>
+                <div id="time"></div>
+            </div>
+            <div class="game-container"></div>
+            <button id="stop" class="hide">Stop Game</button>
+        </div>
+     
+        <div class="controls-container">
+            <p id="result"></p>
+            <p class="resultTime"></p>
+            <button id="start">Start game</button>
+        </div>
+     
+        
+        <audio id="clickSound" src="audio/click.mp3"></audio>
+        <audio id="winSound" src="audio/success.mp3"></audio>
+        <audio id="celebrationSound" src="audio/celebration.mp3"></audio>
+    </section>
+
     <section id="tuttifrutti">
         <h2>Fenomener på sosiale medier</h2>
         <div class="fenomen flip-card">
@@ -124,6 +156,8 @@
                 </div>
             </div>
         </div>
-
     </section>
+
+    <script src="spill.js"></script>
 </body>
+</html>
