@@ -4,23 +4,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <title> Personvern </title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gdpr.css">
 </head>
 
 <body>
-    <h1> Personvern </h1>
-    <h2> GDPR </h2>
-    <p id="definition"> GDPR er forkortelsen for General Data Protection Regulation, de spesifikke personvernlovene for individuelle
-        borgere i EU (EU) og Det europeiske økonomiske samarbeidsområdet (EØS).</p>
-    <section id="mindmap">
-        <div class="center">
-            <img src="bilder/"
+
+    <header>
+        <nav>
+            <div class="logo">
+                <p>
+                    <i class="fa-brands fa-slack" style="color: #ffffff;"></i><a href="index.html">SoMe</a>
+                </p>
+            </div>
+            <div class="right-sections">
+                <ul>
+                    <li><a href="universiell_utforming.html">Universell utforming</a></li>
+                    <li><a href="gdpr.html">GDPR</a></li>
+                    <li><a href="#">Spill</a></li>
+                    <li><a href="#">Om oss</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1> Personvern </h1>
+        <br>
+
+        <h2> GDPR </h2>
+        <p id="definition"> GDPR er forkortelsen for General Data Protection Regulation, de spesifikke personvernlovene
+            for individuelle
+            borgere i EU og Det europeiske økonomiske samarbeidsområdet (EØS).</p>
+
+        <div class="container">
+
+            <div class="image-container">
+                <img src="bilder/GDPR-logo.png" alt="Felles bilde" id="main-image">
+                <div class="overlay"></div>
+            </div>
+
+            <div class="icon-box" id="icon-box-1">
+                <img src="bilder/privacy.png" alt="Ikon 1">
+                <h2>Bøter av inntil 4% av omsetningen</h2>
+                <p>Organisasjoner som bryter med GDPR kan bli bøtelagt med opptil 4 % av den årlige globale omsetningen
+                    eller 20 millioner euro</p>
+            </div>
+
+            <div class="icon-box" id="icon-box-2">
+                <img src="bilder/web.png" alt="Web">
+                <h2>Økt territoriell omfang</h2>
+                <p>Gjelder for ethvert selskap som behandler personopplysninger om EU-borgere, uavhengig av steder</p>
+            </div>
+
+            <div class="icon-box" id="icon-box-3">
+                <img src="bilder/concent.png" alt=" Samtykke">
+                <h2>Samtykke er viktig!</h2>
+                <p>Eksplisitt samtykke må gis i en forståelig og lett tilgjengelig form</p>
+            </div>
+
+            <div class="icon-box" id="icon-box-4">
+                <img src="bilder/access.png" alt="tilgang">
+                <h2>Rett til tilgang og portabilitet</h2>
+                <p>Brukere kan spørre om og hvordan deres personopplysninger blir behandlet</p>
+            </div>
+
+            <div class="icon-box" id="icon-box-5">
+                <img src="bilder/timer.png" alt="timer">
+                <h2>Bruddvarsel innen 72 timer</h2>
+                <p>Brudd må rapporteres innen 72 timer etter at de først ble kjent med bruddet</p>
+            </div>
+
+            <div class="icon-box" id="icon-box-6">
+                <img src="bilder/privacy.png" alt="privacy">
+                <h2>Personvern ved design</h2>
+                <p>Databeskyttelse fra begynnelsen av utformingen av systemene, snarere enn en retrospektiv tillegg</p>
+            </div>
+
+            <div class="icon-box" id="icon-box-7">
+                <img src="bilder/erase.png" alt="erase">
+                <h2>Rett til å bli glemt</h2>
+                <p>Gir den registrerte rett til å få behandlingsansvarlig til å slette hans/hennes personopplysninger
+                    (og potensielt også tredjeparter)</p>
+            </div>
+
+            <div class="icon-box" id="icon-box-8">
+                <img src="bilder/data-protection.png" alt="Databeskyttelse">
+                <h2>Obligatoriske databeskyttelsesansvarlige</h2>
+                <p>Oppnevnt i visse tilfeller, for å legge til rette for at selskapene trenger å demonstrere
+                    GDPR-samsvar</p>
+            </div>
+        </div>
+
+        <div class="container">
 
         </div>
 
+        <section id="personvern">
+            <h2>Personopplysningsloven </h2>
+            <br>
+            <p> Personopplysningsloven handler om behandling – altså innsamling og bruk – av personopplysninger. Reglene
+                gir virksomhetene en rekke plikter samtidig som den gir enkeltpersoner, ofte kalt registrerte, en rekke
+                rettigheter. Loven gjelder stort sett alle virksomheter. Forordningens formål, som er slått fast i
+                artikkel 1, er å sikre vern av fysiske personers (enkeltmenneskers) grunnleggende rettigheter og
+                friheter, særlig deres rett til vern av personopplysninger.</p> <br>
+            <p> Alle har krav på å få vite akkurat hvilke opplysninger som blir lagret om vedkommende. </p>
+        </section>
 
-        <script src="script.js"></script>
+        <section id="cookies-intro">
+            <p> I mars 2019 kom det en uttalelse fra Personvernrådet (EDPB) der det blant legges til grunn at samtykke
+                til cookies må være et gyldig samtykke etter <a class="videreføring" href="#personvern" onclick="scrollToSection('personvern')"> personvernforordningen </a> også. EU-domstolen kom i oktober
+                2019 til samme resultat. </p> <br>
+            <p> Det vil si at kravene til samtykke for å plassere <a class="videreføring" href="#cookies"
+                    onclick="visCookies()" onclick="scrollToSection('cookies')"> cookies </a> på nettsider i EU er høyere enn tidligere, og her
+                er det ikke mulig å gi samtykke gjennom nettleserinnstillingene.</p> <br>
+            <h2>Cookies og informasjonskapsler</h2> <br>
+            <p id="definition">En informasjonskapsel, ofte kalt cookie, er en liten tekstfil som lastes ned og lagres på
+                brukers datamaskin når brukeren åpner en nettside.</p> 
+        </section>
+
+
+        <img id="arrow" src="bilder/arrow.png" alt="arrow" onclick="visCookies()">
+        <section id="cookies" class="hidden">
+            <h2>Cookies</h2>
+            <br>
+            <p> Informasjonskapselen brukes for eksempel til å lagre innloggingsdetaljer, registrere hvor brukeren
+                beveger seg rundt på nettstedet eller huske handlekurv i nettbutikker. Den som står bak
+                informasjonskapselen, altså den behandlingsansvarlige, kan tilpasse tjenestene sine ut fra informasjonen
+                som lagres.</p>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div id="footer">
+            <div>
+                <h4>Om oss</h4>
+                <p>SoMe er her for å øke bevisstheten rundt nett-mobbing, fremme personvern-regler, og opplyse om
+                    universell utforming. Hold deg oppdatert på de siste sosiale medier fenomenene og nyt vårt
+                    interaktive spill. </p>
+            </div>
+            <div>
+                <h4>Kontakt oss</h4>
+                <div class="FooterContainer">
+                    <i class="fa-solid fa-envelope fa-foot"></i>
+                    <p>SoMe@mail.com</p>
+                    <i class="fa-solid fa-phone fa-foot"></i>
+                    <p>+47 123456789</p>
+                    <i class="fa-solid fa-house fa-foot"></i>
+                    <p>Adresse</p>
+                </div>
+            </div>
+            <div>
+                <h4>Følg oss</h4>
+                <div class="FooterContainer">
+                    <i class="fa-brands fa-square-twitter fa-foot"></i>
+                    <p>SoMe</p>
+                    <i class="fa-brands fa-instagram fa-foot"></i>
+                    <p>SoMe</p>
+                    <i class="fa-brands fa-facebook fa-foot"></i>
+                    <p>SoMe</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script-gdpr.js"></script>
 </body>
 
 </html>
