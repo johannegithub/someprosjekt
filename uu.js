@@ -4,13 +4,17 @@ function myFunction() {
     element.classList.toggle("dark-mode");
   }
 
-  // Flip-cards
+  // Flip-cards (Syn)
   const card = document.getElementById("card")
   card.addEventListener("click", flipCard);
 
   function flipCard() {
     card.classList.toggle("flipCard");
   }
+
+
+// Kontrast
+
 
 // Musikk
 
