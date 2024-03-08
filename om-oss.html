@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Om Oss</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    section {
+      margin-bottom: 20px;
+      margin: 80px;
+      text-align: center;
+    }
+
+    h1,
+    h2 {
+      margin-top: 0;
+    }
+
+    img {
+      margin: 30px;
+      width: 600px;
+      align-items: center;
+
+    }
+
+    #toggle-button {
+      background-color: lightblue;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 30px;
+    }
+
+    #toggle-button:hover {
+      background-color: #0056b3;
+    }
+
+    #extra-info {
+      margin-top: 10px;
+    }
+  </style>
+
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+
+  <main>
+    <section id="about-us">
+
+      <h2>Om Oss</h2>
+
+      <p>Velkommen til SoMe - din kilde til å utforske og forstå sosiale medier!
+        Vi er et dedikert team av studenter ved IT1, og vår lidenskap er å øke bevisstheten rundt ulike aspekter ved
+        sosiale medier.
+        Gjennom vår nettside ønsker vi å bidra til å minimere nettmobbing ved å spre kunnskap og oppmerksomhet rundt
+        dette alvorlige problemet.
+        Vi tror på å skape et trygt og inkluderende digitalt miljø for alle.
+      </p>
+
+      <img src="mannmedmobil.webp"> <br>
+
+      <button id="toggle-button">Vis mer info</button>
+
+      <div id="extra-info" style="display: none;">
+
+        <p>
+          I tillegg til å adressere nettmobbing, fokuserer vi også på viktigheten av personvern. På vår nettside kan du
+          utforske ulike personvernregler og lære hvordan du kan beskytte dine personlige data i den digitale verden.
+          Universell utforming er en annen viktig verdi for oss. Vi tror på å gjøre sosiale medier tilgjengelige for
+          alle, uavhengig av fysiske eller kognitive evner. Derfor oppfordrer vi til å ta hensyn til universell
+          utforming i utviklingen av sosiale medier og digitalt innhold.
+          Vi holder også deg oppdatert på ulike fenomener på sosiale medier, slik som "ghosting" og "reading", slik at
+          du kan være oppdatert på det siste innen digital kultur.
+          Til slutt, for litt moro, kan du utforske spillseksjonen vår som tar deg gjennom en interaktiv opplevelse av
+          SoMe-verdenen.
+          Takk for at du besøker SoMe. Vi håper du finner vår nettside informativ, engasjerende og underholdende!
+        </p>
+
+      </div>
+
+
+    </section>
+  </main>
+
+  <script>document.getElementById('toggle-button').addEventListener('click', function () {
+      var extraInfo = document.getElementById('extra-info');
+      if (extraInfo.style.display === 'none') {
+        extraInfo.style.display = 'block';
+        document.getElementById('toggle-button').textContent = 'Skjul ekstra info';
+      } else {
+        extraInfo.style.display = 'none';
+        document.getElementById('toggle-button').textContent = 'Vis ekstra info';
+      }
+    });</script>
+</body>
+
+</html>
