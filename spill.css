@@ -1,3 +1,164 @@
+/* Memory game */
+
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+ 
+:root {
+    --primary-color: #fed9f6;
+    --secondary-color: #fef0fa;
+    --tertiary-color: #ba407d;
+}
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+.title {
+    text-align: center;
+    padding: 25px;
+    font-size: 25px;
+    width: 450px;
+    margin: 40px auto;
+    border-radius: 10px;
+    font-family: 'Handlee', cursive;
+}
+ 
+.wrapper {
+    box-sizing: content-box;
+    width: 430px;
+    padding: 2em 2.5em;
+    margin: 50px auto;
+    background-color: #ffff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 15px;
+    box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+  }
+ 
+.instructions {
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border: 0.5px solid var(--tertiary-color);
+    border-radius: 20px;
+    font-family: 'Handlee', cursive;
+    font-size: 16px;
+    font-weight: 600;
+    width: 400px;
+    line-height: 2;
+    margin-top: 440px;
+    margin-left: 25px;
+}
+ 
+  .game-container {
+    position: relative;
+    width: 100%;
+    display: grid;
+    gap: 0.6em;
+  }
+ 
+  .stats-container {
+    text-align: right;
+    margin-bottom: 1.2em;
+  }
+ 
+  .stats-container span {
+    font-weight: 600;
+  }
+ 
+  .card-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+  }
+ 
+  .card-before,
+  .card-after {
+    position: absolute;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--tertiary-color);
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
+  }
+ 
+  .card-before {
+    background-color: var(--primary-color);
+    font-size: 2.8em;
+  }
+ 
+  .card-after {
+    background-color: var(--secondary-color);
+    transform: rotateY(180deg);
+  }
+ 
+  .card-container.flipped .card-before {
+    transform: rotateY(180deg);
+  }
+ 
+  .card-container.flipped .card-after {
+    transform: rotateY(0deg);
+  }
+ 
+  .controls-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    top: 0;
+  }
+ 
+  button {
+    border-radius: 0.3em;
+    padding: 1em 1.5em;
+    cursor: pointer;
+  }
+ 
+  #stop {
+    font-size: 1.1em;
+    display: block;
+    margin: 1.1em auto 0 auto;
+    border: 1px solid black ;
+  }
+ 
+  .controls-container button {
+    font-size: 1.4em;
+    box-shadow: 0 0.4em 0.5em rgba(86, 66, 0, 0.155);
+  }
+ 
+  .hide {
+    display: none;
+  }
+ 
+  #result {
+    text-align: center;
+  }
+ 
+  #result h2 {
+    font-size: 2.5em;
+  }
+ 
+  #result h4, .resultTime h4, .highScore h4{
+    font-size: 1.8em;
+    margin: 0.6em 0 1em 0;
+  }
+ 
+img{
+    width: 90px;
+}
+
+/* Kort */
 
 .fenomen {
     padding: 20px;
@@ -78,3 +239,4 @@ i {
     padding: 25px;
     transform: rotateY(180deg);
 }
+

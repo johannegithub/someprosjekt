@@ -13,6 +13,57 @@
 </head>
 
 <body>
+    <header>
+        <nav>
+            <div class="logo">
+                <p>
+
+                    <i class="fa-brands fa-slack" style="color: #ffffff;"></i><a href="index.html">SoMe</a>
+                </p>
+            </div>
+            <div class="right-sections">
+                <ul>
+                    <li><a href="universiell_utforming.html">Universell utforming</a></li>
+                    <li><a href="gdpr.html">GDPR</a></li>
+                    <li><a href="spill.html">Spill</a></li>
+                    <li><a href="#">Om oss</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="mamory-game">
+        <div class="title">
+            <h1>Memory Game!</h1>
+        </div>
+
+        <div class="instructions">
+            <h2> Instruksjoner: </h2>
+             Klikk på kortene for å flippe de. Det er om å gjøre å parre opp alle de like kortene, med færrest mulig trekk. <br>
+             Lykke til!
+         </div>
+     
+        <div class="wrapper">
+            <div class="stats-container">
+                <div id="moves-count"></div>
+                <div id="time"></div>
+            </div>
+            <div class="game-container"></div>
+            <button id="stop" class="hide">Stop Game</button>
+        </div>
+     
+        <div class="controls-container">
+            <p id="result"></p>
+            <p class="resultTime"></p>
+            <button id="start">Start game</button>
+        </div>
+     
+        
+        <audio id="clickSound" src="audio/click.mp3"></audio>
+        <audio id="winSound" src="audio/success.mp3"></audio>
+        <audio id="celebrationSound" src="audio/celebration.mp3"></audio>
+    </section>
+
     <section id="tuttifrutti">
         <h2>Fenomener på sosiale medier</h2>
         <div class="fenomen flip-card">
@@ -124,6 +175,41 @@
                 </div>
             </div>
         </div>
-
     </section>
+    <footer>
+        <div id="footer">
+            <div>
+                <h4>Om oss</h4>
+                <p>SoMe er her for å øke bevisstheten rundt nett-mobbing, fremme personvern-regler, og opplyse om
+                    universell utforming. Hold deg oppdatert på de siste sosiale medier fenomenene og nyt vårt
+                    interaktive spill.</p>
+            </div>
+            <div>
+                <h4>Kontakt oss</h4>
+                <div class="FooterContainer">
+                    <i class="fa-solid fa-envelope fa-foot"></i>
+                    <p>SoMe@mail.com</p>
+                    <i class="fa-solid fa-phone fa-foot"></i>
+                    <p>+47 123456789</p>
+                    <i class="fa-solid fa-house fa-foot"></i>
+                    <p>Adresse</p>
+                </div>
+            </div>
+            <div>
+                <h4>Følg oss</h4>
+                <div class="FooterContainer">
+                    <i class="fa-brands fa-square-twitter fa-foot"></i>
+                    <p>SoMe</p>
+                    <i class="fa-brands fa-instagram fa-foot"></i>
+                    <p>SoMe</p>
+                    <i class="fa-brands fa-facebook fa-foot"></i>
+                    <p>SoMe</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="spill.js"></script>
 </body>
+</html>

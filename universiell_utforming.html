@@ -26,14 +26,14 @@
                 <ul>
                     <li><a href="universiell_utforming.html">Universell utforming</a></li>
                     <li><a href="gdpr.html">GDPR</a></li>
-                    <li><a href="#">Spill</a></li>
+                    <li><a href="spill.html">Spill</a></li>
                     <li><a href="#">Om oss</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <main>
+    <main class="uu">
         <section>
             <h1> UNIVERSIELL UTFORMING </h1>
             <button onclick="myFunction()">Lys/Mørk</button>
@@ -61,6 +61,7 @@
                     fargeblinde ikke klarer å skille resultatene grafen prøver å vise.
                 </p>
             </div>
+
             <div id="card">
                 <div class="foran">
                     <i class="fa-solid fa-eye"></i>
@@ -70,6 +71,7 @@
                     <h4> Et ikon av et øye som er blått </h4>
                 </div>
             </div>
+
 
 
         </section>
@@ -91,7 +93,10 @@
                     siden. Dette er også lurt med tanke på nav-baren som skal være lett å navigere i.
                 </p>
             </div>
-            <div> <i class="fa-solid fa-circle-half-stroke"></i> </div>
+
+            <div>
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </div>
 
         </section>
 
@@ -107,7 +112,11 @@
                     punktskrift, så de trenger tilgjengelig innhold, inkludert tekstalternativ for bilder.
                 </p>
             </div>
-            <div> <i class="fa-solid fa-headphones"></i> </div>
+            <div>
+                    <audio src="audio/happy_song.mp3" loop autoplay id="horsel_musikk"></audio>
+                    <i class="fa-solid fa-headphones ikon_musikk" onclick="AvPaaMusikk()"></i>
+                    <h5 id="musikk_h5">Trykk på ikonet for å spille av lyd</h5>
+            </div>
 
         </section>
     </main>
