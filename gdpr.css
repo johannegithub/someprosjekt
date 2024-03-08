@@ -28,6 +28,7 @@ font-family: 'Comfortaa', sans-serif;
 main {
     color: var(--main-font-color);
     font-size: 18px;
+    font-family: 'Comfortaa', sans-serif;
 }
 
 body {
