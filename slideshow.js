@@ -1,36 +1,28 @@
 // Erika
-const slideImage = document.querySelectorAll(".slide");
+const slideImg = document.querySelectorAll(".slide");
 const slidesContainer = document.querySelector(".slides_container");
 const neste_knapp = document.querySelector(".neste_knapp");
 const tilbake_knapp = document.querySelector(".tilbake_knapp");
 const navigasjonsPrikker = document.querySelector(".navigasjonsprikker");
 
-let antallSlides = slideImage.length;
-let slideWidth = slideImage[0].clientWidth;
+let antallSlides = slideImg.length;
+let slideWidth = slideImg[0].clientWidth;
 let currentSlide = 0;
 
-// Set up the slider
-
+// Starter-funksjon som setter opp slideren
 function startFunksjon() {
-    /*   
-      slideImage[0] = 0
-      slideImage[1] = 100%
-      slideImage[2] = 200%
-      */
-
-    slideImage.forEach((img, i) => {
+    slideImg.forEach((img, i) => {
         img.style.left = i * 100 + "%";
     });
 
-    slideImage[0].classList.add("aktiv");
+    slideImg[0].classList.add("aktiv");
 
     lagNavigasjonsPrikker();
 }
 
 startFunksjon();
 
-// Create navigation dots
-
+// Lager navigasjonsprikkene: 
 function lagNavigasjonsPrikker() {
     for (let i = 0; i < antallSlides; i++) {
         const prikk = document.createElement("div");
@@ -45,8 +37,7 @@ function lagNavigasjonsPrikker() {
     navigasjonsPrikker.children[0].classList.add("aktiv");
 }
 
-// Next Button
-
+// Neste-knapp
 neste_knapp.addEventListener("click", () => {
     if (currentSlide >= antallSlides - 1) {
         goToSlide(0);
@@ -57,8 +48,7 @@ neste_knapp.addEventListener("click", () => {
     goToSlide(currentSlide);
 });
 
-// Previous Button
-
+// Tilbake-knapp
 tilbake_knapp.addEventListener("click", () => {
     if (currentSlide <= 0) {
         goToSlide(antallSlides - 1);
@@ -69,8 +59,7 @@ tilbake_knapp.addEventListener("click", () => {
     goToSlide(currentSlide);
 });
 
-// Go To Slide
-
+// Gå til slide
 function goToSlide(slideNumber) {
     slidesContainer.style.transform =
         "translateX(-" + slideWidth * slideNumber + "px)";
@@ -80,17 +69,14 @@ function goToSlide(slideNumber) {
     bestemAktivKlasse();
 }
 
-// Set Active Class
-
+// Bestemmer en Aktiv Class
 function bestemAktivKlasse() {
-    // Set active class for Slide Image
-
+    // Aktiv blir satt på SlideImg
     let currentActive = document.querySelector(".slide.aktiv");
     currentActive.classList.remove("aktiv");
-    slideImage[currentSlide].classList.add("aktiv");
+    slideImg[currentSlide].classList.add("aktiv");
 
-    //   set active class for navigation dots
-
+    // Aktiv blir satt på navigasjonsprikkene
     let currentDot = document.querySelector(".prikkene.aktiv");
     currentDot.classList.remove("aktiv");
     navigasjonsPrikker.children[currentSlide].classList.add("aktiv");
