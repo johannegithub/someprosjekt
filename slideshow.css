@@ -32,7 +32,7 @@ h1 {
     background: #ff00bf;
     padding: 10px;
     position: absolute;
-    top: 77%;
+    top: 500px;
     transform: translateY(-50%);
     font-size: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
