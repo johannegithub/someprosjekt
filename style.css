@@ -21,8 +21,8 @@ main {
 /* Footer */
 footer {
     background-color: black;
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding-bottom: 100px;
+    padding-top: 50px;
     color: white;
 }
 
@@ -30,7 +30,7 @@ footer {
     max-width: 800px;
     margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     gap: 20%;
 }
 
