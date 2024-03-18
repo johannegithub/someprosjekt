@@ -14,8 +14,13 @@ function myFunction() {
 
 
 // Kontrast
-function change_color() {
-    getComputedStyle.getElementById
+const ikon_kontrast = document.querySelector(".fa-circle-half-stroke")
+
+ikon_kontrast.addEventListener("click", changeColor);
+
+function changeColor() {
+    let randomColor = Math.floor(Math.random()*16777215).toString(16);
+    ikon_kontrast.style.color = "#" + randomColor
 }
 
 // Musikk
