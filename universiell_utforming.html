@@ -35,9 +35,9 @@
 
     <main class="uu">
         <section>
-            <h1> UNIVERSIELL UTFORMING </h1>
+            <h1> UNIVERSELL UTFORMING </h1>
             <button onclick="myFunction()">Lys/Mørk</button>
-            <h2> Hva er universiell utforming? </h2>
+            <h2> Hva er universell utforming? </h2>
             <p> «Universell utforming» defineres som «design for alle». Det bygger på tanken om at nettsiden skal være
                 tilgjengelege for alle, uavhengig av alder, funksjonsevne og utdanningsnivå.
                 Universiell utforming handler også om hvor tilgjengelig siden er for alle i en målgruppe, og respektere
@@ -65,12 +65,19 @@
             <div id="card">
                 <div class="foran">
                     <i class="fa-solid fa-eye"></i>
-                    <h5> Trykk på ikonet for å se hva som ville stått dersom bildet ikke blir vist </h5>
+                    <h5> Trykk på ikonet for å se hva som ville blitt lest opp dersom et bildet ikke blir vist </h5>
+
                 </div>
                 <div class="bak">
-                    <h4> Et ikon av et øye som er blått </h4>
+                    <img src="bilder/dssds.png" alt="Et bilde av et øye som er blått">
+                    <!-- Semantic Icon with Accessible Markup -->
+                    <i aria-hidden="true" class="fa-solid fa-arrow-right" title="Time to destination by car"></i>
+                    <span class="sr-only"> Pil som peker mot høyre </span>
                 </div>
             </div>
+
+            <!-- Dekorative og semantiske ikoner -->
+
 
 
 
@@ -113,9 +120,9 @@
                 </p>
             </div>
             <div>
-                    <audio src="audio/happy_song.mp3" loop id="horsel_musikk"></audio>
-                    <i class="fa-solid fa-headphones ikon_musikk" onclick="AvPaaMusikk()"></i>
-                    <h5 id="musikk_h5">Trykk på ikonet for å spille av lyd</h5>
+                <audio src="audio/happy_song.mp3" loop id="horsel_musikk"></audio>
+                <i class="fa-solid fa-headphones ikon_musikk" onclick="AvPaaMusikk()"></i>
+                <h5 id="musikk_h5">Trykk på ikonet for å spille av lyd</h5>
             </div>
 
         </section>

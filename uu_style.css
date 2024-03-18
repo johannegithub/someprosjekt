@@ -40,15 +40,16 @@ section {
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 65px;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     margin-top: 30px;
     text-shadow: 3px 3px 3px grey;
 }
 
 h2 {
-    font-size: 50px;
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
 h3 {
@@ -61,14 +62,15 @@ h4 {
 }
 
 h5 {
-    padding: 20px;
+    font-size: 12px;
+    padding: 15px;
     padding-top: 10px;
     text-align: center;
     color: black;
 }
 
 p {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .bredde_container {
@@ -80,9 +82,9 @@ p {
     width: 220px;
 }
 
-.bak h4 {
-    max-width: 100px;
-    margin: auto;
+.bak img {
+    margin-left: 20px;
+    margin-right: 15px;
     text-align: center;
     color: black;
 }
@@ -97,6 +99,7 @@ p {
 
 .uu i {
     padding: 45px;
+    padding-top: 20px;
     padding-bottom: 5px;
     font-size: 115px;
     text-align: center;
