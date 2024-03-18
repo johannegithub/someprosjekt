@@ -78,7 +78,7 @@ nav {
     
     margin-left: 2px;
     color: white;
-    
+    font-family: 'Comfortaa', sans-serif;
     text-decoration: none;
     font-size:40px ;
 }
@@ -97,7 +97,7 @@ nav {
     padding: 0;
     margin: 0;
     margin-right: 20px;
-   
+    font-family: 'Comfortaa', sans-serif;
 }
 
 .right-sections ul li {
