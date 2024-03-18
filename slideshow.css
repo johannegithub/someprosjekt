@@ -10,7 +10,7 @@ h1 {
 }
 
 .slideshow_container {
-    width: 1250px;
+    width: 1150px;
     overflow: hidden;
     margin: auto;
 }
@@ -30,11 +30,11 @@ h1 {
 .neste_knapp,
 .tilbake_knapp {
     background: #ff00bf;
-    padding: 5px;
+    padding: 10px;
     position: absolute;
-    top: 77%;
+    top: 500px;
     transform: translateY(-50%);
-    font-size: 10px;
+    font-size: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
     z-index: 100;
     cursor: pointer;
@@ -80,7 +80,7 @@ h1 {
 }
 
 .mobbeoffer {
-    padding: 100px 780px 300px 120px;
+    padding: 100px 730px 300px 120px;
     background-size: cover;
 }
 
@@ -95,7 +95,7 @@ h1 {
 
 .Guri {
     background-image: url(https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/0000/tele/2020/10/12/17/13NYH_01-01-DSC_0599.jpg?chk=A8F5B0);
-    padding: 50px 700px 400px 150px;
+    padding: 50px 650px 400px 100px;
 }
 
 .norskjente {
@@ -109,7 +109,7 @@ h1 {
 
 .Amanda {
     background-image: url(https://imaginary.abcmedia.no/resize?force=false&width=1366&aspectratio=16:9&nocrop=false&interlace=true&url=https%3A%2F%2Fabcnyheter.drpublish.aptoma.no%2Fout%2Fimages%2Farticle%2F%2F2012%2F10%2F13%2F195126410%2F1%2Foriginal%2F2208778.jpg);
-    padding: 10px 100px 370px 820px;
+    padding: 40px 90px 370px 750px;
 }
 
 .svenskjente {

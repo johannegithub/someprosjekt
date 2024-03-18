@@ -1,97 +1,83 @@
 // Erika
-const slideImage = document.querySelectorAll(".slide");
-        const slidesContainer = document.querySelector(".slides_container");
-        const neste_knapp = document.querySelector(".neste_knapp");
-        const tilbake_knapp = document.querySelector(".tilbake_knapp");
-        const navigasjonsPrikker = document.querySelector(".navigasjonsprikker");
+const slideImg = document.querySelectorAll(".slide");
+const slidesContainer = document.querySelector(".slides_container");
+const neste_knapp = document.querySelector(".neste_knapp");
+const tilbake_knapp = document.querySelector(".tilbake_knapp");
+const navigasjonsPrikker = document.querySelector(".navigasjonsprikker");
 
-        let numberOfImages = slideImage.length;
-        let slideWidth = slideImage[0].clientWidth;
-        let currentSlide = 0;
+let antallSlides = slideImg.length;
+let slideWidth = slideImg[0].clientWidth;
+let currentSlide = 0;
 
-        // Set up the slider
+// Starter-funksjon som setter opp slideren
+function startFunksjon() {
+    slideImg.forEach((img, i) => {
+        img.style.left = i * 100 + "%";
+    });
 
-        function startFunksjon() {
-            /*   
-              slideImage[0] = 0
-              slideImage[1] = 100%
-              slideImage[2] = 200%
-              */
+    slideImg[0].classList.add("aktiv");
 
-            slideImage.forEach((img, i) => {
-                img.style.left = i * 100 + "%";
-            });
+    lagNavigasjonsPrikker();
+}
 
-            slideImage[0].classList.add("aktiv");
+startFunksjon();
 
-            lagNavigasjonsPrikker();
-        }
+// Lager navigasjonsprikkene: 
+function lagNavigasjonsPrikker() {
+    for (let i = 0; i < antallSlides; i++) {
+        const prikk = document.createElement("div");
+        prikk.classList.add("prikkene");
+        navigasjonsPrikker.appendChild(prikk);
 
-        startFunksjon();
-
-        // Create navigation dots
-
-        function lagNavigasjonsPrikker() {
-            for (let i = 0; i < numberOfImages; i++) {
-                const prikk = document.createElement("div");
-                prikk.classList.add("prikkene");
-                navigasjonsPrikker.appendChild(prikk);
-
-                prikk.addEventListener("click", () => {
-                    goToSlide(i);
-                });
-            }
-
-            navigasjonsPrikker.children[0].classList.add("aktiv");
-        }
-
-        // Next Button
-
-        neste_knapp.addEventListener("click", () => {
-            if (currentSlide >= numberOfImages - 1) {
-                goToSlide(0);
-                return;
-            }
-
-            currentSlide++;
-            goToSlide(currentSlide);
+        prikk.addEventListener("click", () => {
+            goToSlide(i);
         });
+    }
 
-        // Previous Button
+    navigasjonsPrikker.children[0].classList.add("aktiv");
+}
 
-        tilbake_knapp.addEventListener("click", () => {
-            if (currentSlide <= 0) {
-                goToSlide(numberOfImages - 1);
-                return;
-            }
+// Neste-knapp
+neste_knapp.addEventListener("click", () => {
+    if (currentSlide >= antallSlides - 1) {
+        goToSlide(0);
+        return;
+    }
 
-            currentSlide--;
-            goToSlide(currentSlide);
-        });
+    currentSlide++;
+    goToSlide(currentSlide);
+});
 
-        // Go To Slide
+// Tilbake-knapp
+tilbake_knapp.addEventListener("click", () => {
+    if (currentSlide <= 0) {
+        goToSlide(antallSlides - 1);
+        return;
+    }
 
-        function goToSlide(slideNumber) {
-            slidesContainer.style.transform =
-                "translateX(-" + slideWidth * slideNumber + "px)";
+    currentSlide--;
+    goToSlide(currentSlide);
+});
 
-            currentSlide = slideNumber;
+// Gå til slide
+function goToSlide(slideNumber) {
+    slidesContainer.style.transform =
+        "translateX(-" + slideWidth * slideNumber + "px)";
 
-            bestemAktivKlasse();
-        }
+    currentSlide = slideNumber;
 
-        // Set Active Class
+    bestemAktivKlasse();
+}
 
-        function bestemAktivKlasse() {
-            // Set active class for Slide Image
+// Bestemmer en Aktiv Class
+function bestemAktivKlasse() {
+    // Aktiv blir satt på SlideImg
+    let currentActive = document.querySelector(".slide.aktiv");
+    currentActive.classList.remove("aktiv");
+    slideImg[currentSlide].classList.add("aktiv");
 
-            let currentActive = document.querySelector(".slide.aktiv");
-            currentActive.classList.remove("aktiv");
-            slideImage[currentSlide].classList.add("aktiv");
-
-            //   set active class for navigation dots
-
-            let currentDot = document.querySelector(".prikkene.aktiv");
-            currentDot.classList.remove("aktiv");
-            navigasjonsPrikker.children[currentSlide].classList.add("aktiv");
-        }
+    // Aktiv blir satt på navigasjonsprikkene
+    let currentDot = document.querySelector(".prikkene.aktiv");
+    currentDot.classList.remove("aktiv");
+    navigasjonsPrikker.children[currentSlide].classList.add("aktiv");
+}
