@@ -114,6 +114,7 @@ p {
 }
 
 #kontrast {
+    /* rgb(251, 18, 103) */
     color: magenta;
     border-style: dotted;
     border-color: magenta;
