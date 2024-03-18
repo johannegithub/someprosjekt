@@ -14,7 +14,9 @@ function myFunction() {
 
 
 // Kontrast
-
+function change_color() {
+    getComputedStyle.getElementById
+}
 
 // Musikk
 
