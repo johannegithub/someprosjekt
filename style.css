@@ -60,7 +60,7 @@ footer i {
 /* Johanne */
 
 nav {
-    background-color:#22223bff ;
+    background-color:lightblue;
     display: flex;
     justify-content: space-between; /* Plasserer elementer med like mye avstand mellom dem */
     align-items: center;
