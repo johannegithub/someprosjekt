@@ -13,6 +13,8 @@ h1 {
     width: 1150px;
     overflow: hidden;
     margin: auto;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: small;
 }
 
 .slides_container {
@@ -95,7 +97,7 @@ h1 {
 
 .Guri {
     background-image: url(https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/0000/tele/2020/10/12/17/13NYH_01-01-DSC_0599.jpg?chk=A8F5B0);
-    padding: 50px 650px 400px 100px;
+    padding: 80px 650px 400px 100px;
 }
 
 .norskjente {
