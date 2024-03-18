@@ -65,6 +65,7 @@ nav {
     justify-content: space-between; /* Plasserer elementer med like mye avstand mellom dem */
     align-items: center;
     padding: 10px;
+    position: fixed;
     
 }
 
