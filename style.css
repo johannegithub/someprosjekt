@@ -63,6 +63,7 @@ header {
     position: fixed;
     top:0;
     left:0;
+    width: 100%;
 }
 
 nav {
@@ -71,7 +72,8 @@ nav {
     justify-content: space-between; 
     align-items: center;
     padding: 10px;
-    width: 100%;
+    
+
 }
 
 .logo i {
