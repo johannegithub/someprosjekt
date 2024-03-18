@@ -59,16 +59,20 @@ footer i {
 
 /* Johanne */
 
+header {
+    position: fixed;
+    top:0;
+    left:0;
+}
+
 nav {
     background-color:lightblue;
     display: flex;
-    justify-content: space-between; /* Plasserer elementer med like mye avstand mellom dem */
+    justify-content: space-between; 
     align-items: center;
     padding: 10px;
-    position: fixed;
-    
+    width: 100%;
 }
-
 
 .logo i {
     font-size: 40px;
@@ -76,7 +80,6 @@ nav {
 }
 
 .logo a {
-    
     margin-left: 2px;
     color: white;
     font-family: 'Comfortaa', sans-serif;
