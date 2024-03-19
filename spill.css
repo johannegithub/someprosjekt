@@ -163,19 +163,19 @@ img {
   border-radius: 10px;
 }
 
-#tuttifrutti {
+#fenomen_section {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 50px;
   justify-content: center;
 }
 
-#tuttifrutti h2 {
+#fenomen_section h2 {
   font-size: 48px;
   padding: 20px;
 }
 
-#tuttifrutti h3 {
+#fenomen_section h3 {
   font-size: 30px;
   padding-bottom: 10px;
 }
@@ -186,12 +186,12 @@ i {
   padding: 10px;
 }
 
-#tuttifrutti p {
+#fenomen_section p {
   font-size: 13px;
   padding-bottom: 5px;
 }
 
-#tuttifrutti li {
+#fenomen_section li {
   font-size: 13px;
 }
 
