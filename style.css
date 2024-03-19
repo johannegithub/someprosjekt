@@ -120,3 +120,28 @@ footer i {
     font-size: 15px;
     padding-top: 8px;
 }
+
+@media only screen and (max-width: 900px) {
+    #footer {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 50px;
+        justify-items: center;
+        width: 100%;
+    }
+
+    #footer div:first-of-type {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    #footer h4,p:first-of-type {
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    main{
+        margin-top: 200px;
+    }
+}

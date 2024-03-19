@@ -138,8 +138,8 @@ p {
 
 @media only screen and (max-width: 900px) {
     .uu {
-        margin: 0 auto;
-        margin-top: 125px;
+        margin: 15px;
+        margin-top: 200px;
     }
 
     h1 {
@@ -188,11 +188,6 @@ p {
   }
 
   @media only screen and (max-width: 600px) {
-    .uu {
-        margin: 15px;
-        margin-top: 125px;
-    }
-
     h1 {
         font-size: 40px;
     }
