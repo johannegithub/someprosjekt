@@ -3,11 +3,6 @@ body {
     color:black
 }
 
-main {
-    max-width: 800px;
-    margin: auto;
-}
-
 section:nth-child(1) {
     margin-bottom: 75px;
 }
@@ -130,4 +125,53 @@ p {
     border-width: medium;
 }
 
+@media only screen and (max-width: 900px) {
+    body {
+        margin: 15px;
+    }
 
+    h1 {
+        font-size: 60px;
+    }
+  
+    button {
+        padding: 5px;
+        font-size: 12px;
+      grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+  
+    .boks {
+        display: grid;
+        grid-template-rows: 2fr 1.3fr;
+        justify-content: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    div .fa-solid {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .bredde_container {
+        max-width: 100%;
+        padding: 15px;
+        padding-bottom: 0px;
+    }
+
+    .uu i{
+        padding-top: 0px;
+        padding-top: 0px;
+        padding-bottom: 5px;
+    }
+
+  }
