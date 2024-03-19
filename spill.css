@@ -8,7 +8,7 @@
   --tertiary-color: #61A5C2;
   --quaternary-color:#89C2D9;
   --quinary-color: #fed9f6;
-  --senary-color: #ba407d; 
+  --senary-color: #cd4883d9; 
   --septenary-color: #fef0fa; 
 
 }
@@ -160,6 +160,7 @@ img {
 .fenomen {
   padding: 20px;
   margin: 10px;
+  border-radius: 10px;
 }
 
 #tuttifrutti {
@@ -197,7 +198,7 @@ i {
   background-color: transparent;
   width: 245px;
   height: 350px;
-  border: 1px solid #f1f1f1;
+  border: 1px solid var(--senary-color);
   perspective: 1000px;
 }
 
