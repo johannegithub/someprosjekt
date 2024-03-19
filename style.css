@@ -19,16 +19,18 @@ main {
 }
 
 :root {
-    --timberwolf: #dad7cdff;
-    --sage: #a3b18aff;
-    --fern-green: #588157ff;
-    --hunter-green: #3a5a40ff;
-    --brunswick-green: #344e41ff;
-}
+    --primary-color: #012A4A;
+    --secondary-color:#01497C;
+    --tertiary-color: #61A5C2;
+    --quaternary-color:#89C2D9;
+    --quinary-color: #fed9f6;
+    --senary-color: #ba407d; 
+    --septenary-color: #fef0fa; 
+  }
 
 /* Footer */
 footer {
-    background-color: black;
+    background-color: var(--primary-color);
     padding-bottom: 100px;
     padding-top: 50px;
     color: white;
@@ -77,7 +79,7 @@ header {
 }
 
 nav {
-    background-color: #023047;
+    background-color: var(--primary-color);
     display: flex;
     justify-content: space-between;
     align-items: center;

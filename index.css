@@ -1,4 +1,16 @@
 /* Oda */
+
+  :root {
+    --primary-color: #012A4A;
+    --secondary-color:#01497C;
+    --tertiary-color: #61A5C2;
+    --quaternary-color:#89C2D9;
+    --quinary-color: #fed9f6;
+    --senary-color: #ba407d; 
+    --septenary-color: #fef0fa; 
+  
+  }
+
 #nettmobbing {
     display: grid; 
     grid-template-columns: 1fr 1fr; 
@@ -9,7 +21,7 @@
 }
 
 .statestikk {
-    background-color: #333;
+    background-color: var(--senary-color);
     color: white; 
 }
 
@@ -54,4 +66,8 @@
 #ressurser img {
     width: 160px;
     height: 120px; 
+}
+
+#ressurser a {
+    color: var(--senary-color)
 }
