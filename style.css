@@ -18,6 +18,14 @@ main {
     font-family: 'Comfortaa', sans-serif;
 }
 
+:root {
+    --timberwolf: #dad7cdff;
+    --sage: #a3b18aff;
+    --fern-green: #588157ff;
+    --hunter-green: #3a5a40ff;
+    --brunswick-green: #344e41ff;
+}
+
 /* Footer */
 footer {
     background-color: black;
@@ -56,14 +64,6 @@ footer p {
 footer i {
     font-size: 15px;
     padding-top: 8px;
-}
-
-:root {
-    --timberwolf: #dad7cdff;
-    --sage: #a3b18aff;
-    --fern-green: #588157ff;
-    --hunter-green: #3a5a40ff;
-    --brunswick-green: #344e41ff;
 }
 
 /* Johanne */
