@@ -57,6 +57,12 @@ footer i {
     padding-top: 8px;
 }
 
+--timberwolf: #dad7cdff;
+--sage: #a3b18aff;
+--fern-green: #588157ff;
+--hunter-green: #3a5a40ff;
+--brunswick-green: #344e41ff;
+
 
 /* Johanne */
 
@@ -69,7 +75,7 @@ header {
 }
 
 nav {
-    background-color:lightskyblue;
+    background-color:#344e41ff;
     display: flex;
     justify-content: space-between; 
     align-items: center;
