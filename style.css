@@ -52,17 +52,18 @@ footer p {
     column-gap: 20px;
     row-gap: 20px;
 }
+
 footer i {
     font-size: 15px;
     padding-top: 8px;
 }
 
 :root {
---timberwolf: #dad7cdff;
---sage: #a3b18aff;
---fern-green: #588157ff;
---hunter-green: #3a5a40ff;
---brunswick-green: #344e41ff;
+    --timberwolf: #dad7cdff;
+    --sage: #a3b18aff;
+    --fern-green: #588157ff;
+    --hunter-green: #3a5a40ff;
+    --brunswick-green: #344e41ff;
 }
 
 /* Johanne */
@@ -70,15 +71,15 @@ footer i {
 header {
     position: fixed;
     z-index: 2;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
 }
 
 nav {
-    background-color:#023047;
+    background-color: #023047;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     padding: 10px;
 }
@@ -93,7 +94,7 @@ nav {
     color: white;
     font-family: 'Comfortaa', sans-serif;
     text-decoration: none;
-    font-size:40px ;
+    font-size: 40px;
 }
 
 .right-sections ul {
