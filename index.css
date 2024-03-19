@@ -44,13 +44,10 @@
 }
 
 #ressurser {
-    font-size: 18px; 
-    margin-bottom: 100px; 
-}
-
-#ressurser {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
+    font-size: 18px; 
+    margin-bottom: 100px; 
 }
 
 #ressurser div:nth-of-type(1) {
