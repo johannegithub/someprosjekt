@@ -1,5 +1,5 @@
 function visCookies() {
-    var cookies = document.getElementById("cookies");
+    let cookies = document.getElementById("cookies");
     if (cookies.classList.contains("hidden")) {
         cookies.classList.remove("hidden"); // Fjern skjultklassen
     } else {
@@ -8,7 +8,7 @@ function visCookies() {
 }
 
 function scrollToSection(sectionId) {
-    var section = document.getElementById(sectionId);
+    let section = document.getElementById(sectionId);
     if (section) {
         section.scrollIntoView({ behavior: "smooth" });
     }
