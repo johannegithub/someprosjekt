@@ -137,22 +137,22 @@ p {
 }
 
 @media only screen and (max-width: 900px) {
-    main {
-        margin: 15px;
+    .uu {
+        margin: 0 auto;
+        margin-top: 125px;
     }
 
     h1 {
-        font-size: 60px;
+        font-size: 70px;
     }
   
     button {
         padding: 5px;
-        font-size: 12px;
-      grid-template-columns: 1fr;
+        font-size: 15px;
     }
 
     h2 {
-        font-size: 30px;
+        font-size: 40px;
     }
 
     p {
@@ -185,4 +185,28 @@ p {
         padding-bottom: 5px;
     }
 
+  }
+
+  @media only screen and (max-width: 600px) {
+    .uu {
+        margin: 15px;
+        margin-top: 125px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+  
+    button {
+        padding: 3px;
+        font-size: 8px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 12px;
+    }
   }
