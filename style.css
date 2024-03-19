@@ -75,7 +75,7 @@ header {
 }
 
 nav {
-    background-color:#344e41ff;
+    background-color:#023047;
     display: flex;
     justify-content: space-between; 
     align-items: center;
@@ -95,19 +95,8 @@ nav {
     font-size:40px ;
 }
 
-/* CSS HEX */
-/*
---space-cadet: #22223bff;
---ultra-violet:#4a4e69ff;
---rose-quartz: #9a8c98ff;
---pale-dogwood: #c9ada7ff;
---isabelline: #f2e9e4ff;
-*/
-
 .right-sections ul {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
     margin-right: 20px;
     font-family: 'Comfortaa', sans-serif;
 }
