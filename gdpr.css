@@ -51,20 +51,6 @@ a {
     position: relative;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-}
-
 .icon-box {
     position: absolute;
     text-align: center;
@@ -74,20 +60,24 @@ a {
 .icon-box img {
     width: 50px;
     height: 50px;
-    z-index: 1;
 }
 
 .icon-box h2,
 .icon-box p {
     display: none;
+    position: relative;
 }
 
 .icon-box:hover h2,
 .icon-box:hover p {
+    z-index: 2;
     display: block;
-    z-index: 1;
     background-color: lightblue;
     width: 600px;
+}
+
+.icon-box:not(:hover) {
+    z-index: 1;
 }
 
 #icon-box-1 {
@@ -127,10 +117,6 @@ a {
     font-weight: bold;
 }
 
-h1 {
-    margin-top: 30px;
-}
-
 #personvern {
     background-color: lightcyan;
     margin: 60px 0px;
@@ -164,6 +150,3 @@ h1 {
     display: none;
     /* Skjul elementer med denne klassen */
 }
-
-/* Media Queries */
-

@@ -10,12 +10,13 @@ const controls = document.querySelector(".controls-container");
 const clickSound = document.getElementById("clickSound");
 const winSound = document.getElementById("winSound");
 const celebrationSound = document.getElementById("celebrationSound");
- 
+
+// Deklarerer variabler
 let cards;
 let interval;
 let firstCard = false;
 let secondCard = false;
- 
+
 // Lager items array med bildeinfo
 const items = [
     { name: "facebook", image: "bilder/facebook.png" },
@@ -31,43 +32,43 @@ const items = [
     { name: "youtube", image: "bilder/youtube.png" },
     { name: "vine", image: "bilder/vine.png" },
 ];
- 
+
 // Initialiserer tid og tellevariabler
 let seconds = 0,
     minutes = 0;
- 
+
 let movesCount = 0;
 let winCount = 0;
- 
+
 //Funk. for å oppdatere tiden
 const timeGenerator = () => {
     seconds += 1;
- 
+
     // Minutter logikk
     if (seconds >= 60) {
         minutes += 1;
         seconds = 0;
     }
- 
+
     // Formaterer tid før visning
-    let secondsValue = seconds < 10 ? `0${seconds}` : seconds; //dersom sekunder er mindre enn 10 da skal det stå 0 først, : betyr ellersA
+    let secondsValue = seconds < 10 ? `0${seconds}` : seconds; //dersom sekunder er mindre enn 10 da skal det stå 0 først, : betyr eller A
     let minutesValue = minutes < 10 ? `0${minutes}` : minutes;
     timeValue.innerHTML = `<span>Tid: </span>${minutesValue}:${secondsValue}`;
     resultTime.innerHTML = `<h4>Tid: ${minutesValue}:${secondsValue}</h4>`;
 };
- 
+
 // For å øke ant. trekk
 const movesCounter = () => {
     movesCount += 1;
     moves.innerHTML = `<span>Trekk: </span>${movesCount}`;
 };
- 
+
 // Lydspillfunksjon
 const playSound = (audioElement) => {
     audioElement.currentTime = 0; // Tilbakestiller lyden til starten
     audioElement.play();
 };
- 
+
 // Velger random object fra items array
 const generateRandom = (size = 4) => {
     // Temporary array
@@ -85,7 +86,7 @@ const generateRandom = (size = 4) => {
     }
     return cardValues;
 };
- 
+
 // Genererer spillmatrisen
 const matrixGenerator = (cardValues, size = 4) => {
     gameContainer.innerHTML = "";
@@ -101,10 +102,10 @@ const matrixGenerator = (cardValues, size = 4) => {
      </div>
      `;
     }
- 
+
     // Grid
     gameContainer.style.gridTemplateColumns = `repeat(${size},auto)`;
- 
+
     // Kort
     cards = document.querySelectorAll(".card-container");
     cards.forEach((card) => {
@@ -124,7 +125,7 @@ const matrixGenerator = (cardValues, size = 4) => {
                     // SecondCard og verdi
                     secondCard = card;
                     let secondCardValue = card.getAttribute("data-card-value");
- 
+
                     if (firstCardValue == secondCardValue) {
                         // Hvis begge kort metcher legg til matched klasse så kortene vil bli ignorert neste gang
                         firstCard.classList.add("matched");
@@ -138,7 +139,7 @@ const matrixGenerator = (cardValues, size = 4) => {
                             result.innerHTML = `<h2>Du vant!</h2>
                               <h4>Du brukte ${movesCount} trekk</h4>`;
                             stopGame();
- 
+
                             // Spill av celebrationSound når alle par er matchet, og spillet er vunnet
                             playSound(celebrationSound);
                         }
@@ -146,7 +147,7 @@ const matrixGenerator = (cardValues, size = 4) => {
                             playSound(winSound);
                         }
                     }
- 
+
                     else {
                         // Hvis kortet ikke matcher flipper det tilbake
                         let [tempFirst, tempSecond] = [firstCard, secondCard];
@@ -162,7 +163,7 @@ const matrixGenerator = (cardValues, size = 4) => {
         });
     });
 };
- 
+
 // Legger til tastaturnavigasjon for å starte og stoppe spillet
 document.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
@@ -175,7 +176,7 @@ document.addEventListener("keydown", (event) => {
         }
     }
 });
- 
+
 // Starter spillet når brukeren klikker på Start-knappen eller trykker Enter
 startButton.addEventListener("click", startGame);
 startButton.addEventListener("keydown", (event) => {
@@ -183,7 +184,7 @@ startButton.addEventListener("keydown", (event) => {
         startGame();
     }
 });
- 
+
 // Stopper spillet når brukeren klikker på Stopp-knappen eller trykker Enter
 stopButton.addEventListener("click", stopGame);
 stopButton.addEventListener("keydown", (event) => {
@@ -191,13 +192,13 @@ stopButton.addEventListener("keydown", (event) => {
         stopGame();
     }
 });
- 
+
 // Starter spillet og initialiserer verdier og funksjonsanrop
 function startGame() {
     movesCount = 0;
     seconds = 0;
     minutes = 0;
- 
+
     // Kontrollerer knapper og synlighet
     controls.classList.add("hide");
     stopButton.classList.remove("hide");
@@ -209,17 +210,17 @@ function startGame() {
     playSound(clickSound); // Spiller av startlyden
     initializer();
 }
- 
+
 // Stopper spillet og viser resultater
 function stopGame() {
     controls.classList.remove("hide");
     stopButton.classList.add("hide");
     startButton.classList.remove("hide");
     clearInterval(interval);
- 
+
     playSound(clickSound); // Spiller av stopplyden ved stopp
 }
- 
+
 // Initialiser verdier og funk. anrop
 const initializer = () => {
     result.innerText = "";
