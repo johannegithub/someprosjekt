@@ -16,6 +16,10 @@ main {
     margin: auto;
     margin-top: 115px;
     font-family: 'Comfortaa', sans-serif;
+    
+}
+
+body {
     background-color: ghostwhite;
 }
 
