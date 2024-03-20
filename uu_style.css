@@ -112,26 +112,28 @@ p {
 }
 
 #syn {
-    color: rgb(90, 155, 230);
+    /*color: rgb(90, 155, 230);*/
+    color: var(--secondary-color);
     border-style: dotted;
-    border-color: rgb(90, 155, 230);
+    border-color: var(--secondary-color);
     border-radius: 20px;
     border-width: medium;
 }
 
 #kontrast {
     /* rgb(251, 18, 103) */
-    color: magenta;
+    /*color: magenta;*/
+    color: var(--senary-color);
     border-style: dotted;
-    border-color: magenta;
+    border-color: var(--senary-color);
     border-radius: 20px;
     border-width: medium;
 }
 
 #lyd {
-    color: coral;
+    color: var(--tertiary-color);
     border-style: dotted;
-    border-color: coral;
+    border-color: var(--tertiary-color);
     border-radius: 20px;
     border-width: medium;
 }

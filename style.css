@@ -120,7 +120,8 @@ footer i {
     font-size: 15px;
     padding-top: 8px;
 }
-@media only screen and (max-width: 850px) {
+
+/*@media only screen and (max-width: 850px) {
     #footer {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
@@ -129,6 +130,7 @@ footer i {
         grid-column: span 2;
     }
   }
+  */
 
 
 @media only screen and (max-width: 900px) {
@@ -148,10 +150,33 @@ footer i {
     #footer h4,p:first-of-type {
         padding: 5px;
     }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.right-sections ul li a {
+        padding: 12px;
+        font-size: 12px;
+    }
+
+    .logo i {
+        margin-left: 0px;
+    }
+
 }
+
 
 @media only screen and (max-width: 600px){
     main{
         margin-top: 200px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    div.right-sections ul li a{
+        padding: 7px;
+        font-size: 11px;
     }
 }
