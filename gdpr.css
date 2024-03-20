@@ -7,7 +7,7 @@ font-family: 'Comfortaa', sans-serif;
 */
 
 :root {
-    --background-color: white;
+    --background-color: ghostwhite;
     --main-font-color: black;
 
     --primary-color: #012A4A;
@@ -37,6 +37,23 @@ a {
 }
 
 /* GDPR */
+
+h1 {
+    font-size: 65px;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    text-shadow: 3px 3px 3px grey;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 20px;
+}
 
 .container {
     display: flex;
