@@ -10,10 +10,14 @@ font-family: 'Comfortaa', sans-serif;
     --background-color: white;
     --main-font-color: black;
 
-    --primary-color: ;
-    --secondary-color: ;
-    --tertiary-color: ;
-    --quanternary-color: ;
+    --primary-color: #012A4A;
+    --secondary-color: #01497C;
+    --tertiary-color: #61A5C2;
+    --quaternary-color: #89C2D9;
+    --quinary-color: #fed9f6;
+    --senary-color: #cd4883d9;
+    --septenary-color: #fef0fa;
+
 }
 
 /* Generelt */
@@ -124,7 +128,7 @@ a {
 }
 
 #cookies-intro {
-    background-color: rgba(255, 182, 193, 0.736);
+    background-color: var(--quinary-color);
     margin: 15px 0px;
     padding: 50px;
 }

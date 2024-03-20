@@ -1,3 +1,14 @@
+:root {
+    --primary-color: #012A4A;
+    --secondary-color:#01497C;
+    --tertiary-color: #61A5C2;
+    --quaternary-color:#89C2D9;
+    --quinary-color: #fed9f6;
+    --senary-color: #cd4883d9; 
+    --septenary-color: #fef0fa; 
+  
+  }
+
 h1 {
     text-align: center;
     color: black;
@@ -32,7 +43,7 @@ h1 {
 
 .neste_knapp,
 .tilbake_knapp {
-    background: #ff00bf;
+    background: var(--senary-color);
     padding: 10px;
     position: absolute;
     top: 500px;
@@ -46,7 +57,7 @@ h1 {
 
 .neste_knapp:hover,
 .tilbake_knapp:hover {
-    background: #48f9ff;
+    background: var(--quinary-color);
 }
 
 .tilbake_knapp {
@@ -68,7 +79,7 @@ h1 {
 }
 
 .prikkene {
-    background: #333;
+    background: var(--senary-color);
     height: 16px;
     width: 16px;
     border: 2px solid #000;
@@ -79,7 +90,7 @@ h1 {
 }
 
 .prikkene.aktiv {
-    background: #eee;
+    background: var(--septenary-color);
 }
 
 .mobbeoffer {

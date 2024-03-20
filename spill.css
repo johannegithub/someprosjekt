@@ -3,9 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 
 :root {
-  --primary-color: #fed9f6;
-  --secondary-color: #fef0fa;
-  --tertiary-color: #ba407d;
+  --primary-color: #012A4A;
+  --secondary-color:#01497C;
+  --tertiary-color: #61A5C2;
+  --quaternary-color:#89C2D9;
+  --quinary-color: #fed9f6;
+  --senary-color: #cd4883d9; 
+  --septenary-color: #fef0fa; 
+
 }
 
 * {
@@ -30,8 +35,8 @@
 
 .instructions {
   padding: 20px;
-  background-color: var(--secondary-color);
-  border: 0.5px solid var(--tertiary-color);
+  background-color: var(--septenary-color);
+  border: 0.5px solid var(--senary-color);
   border-radius: 20px;
   font-family: 'Handlee', cursive;
   font-size: 16px;
@@ -74,18 +79,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--tertiary-color);
+  border: 1px solid var(--senary-color);
   transition: transform 0.7s ease-out;
   backface-visibility: hidden;
 }
 
 .card-before {
-  background-color: var(--primary-color);
+  background-color: var(--quinary-color);
   font-size: 2.8em;
 }
 
 .card-after {
-  background-color: var(--secondary-color);
+  background-color: var(--septenary-color);
   transform: rotateY(180deg);
 }
 
@@ -105,7 +110,7 @@
   flex-direction: column;
   width: 100%;
   height: 815px;
-  background-color: var(--primary-color);
+  background-color: var(--quinary-color);
   top: 0;
 }
 
@@ -155,20 +160,22 @@ img {
 .fenomen {
   padding: 20px;
   margin: 10px;
+  border-radius: 10px;
 }
 
-#tuttifrutti {
+#fenomen_section {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 50px;
+  justify-content: center;
 }
 
-#tuttifrutti h2 {
+#fenomen_section h2 {
   font-size: 48px;
   padding: 20px;
 }
 
-#tuttifrutti h3 {
+#fenomen_section h3 {
   font-size: 30px;
   padding-bottom: 10px;
 }
@@ -179,12 +186,12 @@ i {
   padding: 10px;
 }
 
-#tuttifrutti p {
+#fenomen_section p {
   font-size: 13px;
   padding-bottom: 5px;
 }
 
-#tuttifrutti li {
+#fenomen_section li {
   font-size: 13px;
 }
 
@@ -192,7 +199,7 @@ i {
   background-color: transparent;
   width: 245px;
   height: 350px;
-  border: 1px solid #f1f1f1;
+  border: 1px solid var(--senary-color);
   perspective: 1000px;
 }
 
@@ -217,7 +224,7 @@ i {
 }
 
 .flip-card-front {
-  background-color: pink;
+  background-color: var(--quinary-color);
   padding: 50px;
   color: black;
   display: flex;
@@ -227,7 +234,7 @@ i {
 }
 
 .flip-card-back {
-  background-color: pink;
+  background-color: var(--quinary-color);
   padding: 25px;
   transform: rotateY(180deg);
 }

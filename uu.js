@@ -34,7 +34,7 @@ function AvPaaMusikk() {
         musikk.play();
         ikon_musikk.classList.remove("fa-headphones")
         ikon_musikk.classList.add("fa-volume-high")
-        h5_tekst.innerHTML = ""
+        h5_tekst.innerHTML = "MELODI"
     }
     else {
         musikk.pause();
