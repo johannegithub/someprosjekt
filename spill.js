@@ -127,7 +127,7 @@ const matrixGenerator = (cardValues, size = 4) => {
                     let secondCardValue = card.getAttribute("data-card-value");
 
                     if (firstCardValue == secondCardValue) {
-                        // Hvis begge kort metcher legg til matched klasse så kortene vil bli ignorert neste gang
+                        // Hvis begge kort matcher legg til matched klasse så kortene vil bli ignorert neste gang
                         firstCard.classList.add("matched");
                         secondCard.classList.add("matched");
                         // Setter firstCard til false fordi neste kort vil bli det første
@@ -225,7 +225,8 @@ function stopGame() {
 const initializer = () => {
     result.innerText = "";
     winCount = 0;
+
     let cardValues = generateRandom();
-    console.log(cardValues);
+    console.log(cardValues); //viser i console
     matrixGenerator(cardValues);
 };
