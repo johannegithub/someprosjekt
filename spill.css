@@ -45,6 +45,8 @@
   line-height: 2;
   margin-top: 565px;
   margin-left: 25px;
+  position: relative;
+  z-index: 1;
 }
 
 .game-container {
