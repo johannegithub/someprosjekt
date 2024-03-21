@@ -52,7 +52,7 @@ const timeGenerator = () => {
     }
 
     // Formaterer tid før visning
-    let secondsValue = seconds < 10 ? `0${seconds}` : seconds; //dersom sekunder er mindre enn 10 da skal det stå 0 først, : betyr eller A
+    let secondsValue = seconds < 10 ? `0${seconds}` : seconds; // dersom sekunder er mindre enn 10 da skal det stå 0 først
     let minutesValue = minutes < 10 ? `0${minutes}` : minutes;
     timeValue.innerHTML = `<span>Tid: </span>${minutesValue}:${secondsValue}`;
     resultTime.innerHTML = `<h4>Tid: ${minutesValue}:${secondsValue}</h4>`;
@@ -91,7 +91,7 @@ const generateRandom = (size = 4) => {
 // Genererer spillmatrisen
 const matrixGenerator = (cardValues, size = 4) => {
     gameContainer.innerHTML = "";
-    cardValues = [...cardValues, ...cardValues]; //dobler card vales
+    cardValues = [...cardValues, ...cardValues]; //dobbler card vales
 
     // Stokking
     cardValues.sort(() => Math.random() - 0.5); //tilfeldig sortering cardValues-array
@@ -112,6 +112,7 @@ const matrixGenerator = (cardValues, size = 4) => {
     cards = document.querySelectorAll(".card-container");
     cards.forEach((card) => {
         card.addEventListener("click", () => {
+            // Hvis kortet ikke er parret enda og heller ikke er flippet, kjør. (Kort som er parret, eller allerede flippet blir ignorert ved klikk.)
             if (!card.classList.contains("matched") && !card.classList.contains("flipped")) {
                 // Flipp det klikkede kortet
                 card.classList.add("flipped");
