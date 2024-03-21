@@ -112,7 +112,7 @@ const matrixGenerator = (cardValues, size = 4) => {
     cards = document.querySelectorAll(".card-container");
     cards.forEach((card) => {
         card.addEventListener("click", () => {
-            // Hvis kortet ikke er parret enda og heller ikke er flippet, kjør. (Kort som er parret, eller allerede flippet blir ignorert ved klikk.)
+            // Hvis kortet ikke er parret eller flipped enda, kjør. (Kort som er parret eller snudd ignoreres ved klikk.)
             if (!card.classList.contains("matched") && !card.classList.contains("flipped")) {
                 // Flipp det klikkede kortet
                 card.classList.add("flipped");
