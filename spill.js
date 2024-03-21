@@ -1,3 +1,4 @@
+// Amina
 // Henter elementer fra DOM
 const moves = document.getElementById("moves-count");
 const timeValue = document.getElementById("time");
@@ -90,9 +91,10 @@ const generateRandom = (size = 4) => {
 // Genererer spillmatrisen
 const matrixGenerator = (cardValues, size = 4) => {
     gameContainer.innerHTML = "";
-    cardValues = [...cardValues, ...cardValues];
+    cardValues = [...cardValues, ...cardValues]; //dobler card vales
+
     // Stokking
-    cardValues.sort(() => Math.random() - 0.5);
+    cardValues.sort(() => Math.random() - 0.5); //tilfeldig sortering cardValues-array
     for (let i = 0; i < size * size; i++) {
         gameContainer.innerHTML += `
      <div class="card-container" data-card-value="${cardValues[i].name}">
@@ -110,8 +112,7 @@ const matrixGenerator = (cardValues, size = 4) => {
     cards = document.querySelectorAll(".card-container");
     cards.forEach((card) => {
         card.addEventListener("click", () => {
-            // Hvis kortet ikke er parret enda, kjør. Kort som er parret blir ignorert ved klikk.
-            if (!card.classList.contains("matched")) {
+            if (!card.classList.contains("matched") && !card.classList.contains("flipped")) {
                 // Flipp det klikkede kortet
                 card.classList.add("flipped");
                 if (!firstCard) {
