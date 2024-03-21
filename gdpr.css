@@ -37,6 +37,16 @@ a {
 }
 
 /* GDPR */
+#hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(bilder/personvern.png);
+    height: fit-content;
+    color: var(--hero-font-color);
+    background-size: cover;
+    background-position: top;
+    padding: 200px 20px;
+    display: flex;
+    justify-content: center;
+}
 
 h1 {
     font-size: 65px;
@@ -44,6 +54,9 @@ h1 {
     margin-bottom: 50px;
     margin-top: 30px;
     text-shadow: 3px 3px 3px grey;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgb(255, 255, 255);
+    width: 500px;
 }
 
 h2 {
