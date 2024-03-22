@@ -69,6 +69,11 @@ p {
     font-size: 20px;
 }
 
+#GDPR {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 #GDPR_sirkel {
     display: flex;
     flex-direction: row;
@@ -87,53 +92,53 @@ p {
     position: relative;
 }
 
-.icon-box {
+.icon {
     position: absolute;
     text-align: center;
     transform-origin: center bottom;
 }
 
-.icon-box i {
+.icon i {
     font-size: 40px;
     color: skyblue;
     padding-bottom: 20px;
 }
 
-.icon-box h2,
-.icon-box p {
+.icon h2,
+.icon p {
     display: none;
     position: relative;
 }
 
-.icon-box:hover h2,
-.icon-box:hover p {
+.icon:hover h2,
+.icon:hover p {
     z-index: 2;
     display: block;
     background-color: lightblue;
     width: 600px;
 }
 
-.icon-box:not(:hover) {
+.icon:not(:hover) {
     z-index: 1; 
 }
 
-#icon-box-1 {
+.icon_collection_1 {
     transform: rotate(-45deg) translateY(-120px);
 }
 
-#icon-box-2 {
+.icon_collection_2 {
     transform: rotate(-90deg) translateY(-120px);
 }
 
-#icon-box-3 {
+.icon_collection_3 {
     transform: rotate(-135deg) translateY(-120px);
 }
 
-#icon-box-4 {
+.icon_collection_4 {
     transform: rotate(-180deg) translateY(-120px);
 }
 
-#icon-box-5 {
+.icon_collection_5 {
     transform: rotate(45deg) translateY(-120px);
 }
 
@@ -141,11 +146,11 @@ p {
     transform: rotate(90deg) translateY(-120px);
 }
 
-#icon-box-7 {
+.icon_collection_7 {
     transform: rotate(135deg) translateY(-120px);
 }
 
-#icon-box-8 {
+.icon_collection_8 {
     transform: rotate(0deg) translateY(-120px);
 }
 
