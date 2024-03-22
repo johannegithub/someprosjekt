@@ -104,7 +104,13 @@ p {
     padding-bottom: 20px;
 }
 
+.hidden_box {
+    display: none;
+}
 
+.active_box {
+    display: block;
+}
 
 .icon:not(:hover) {
     z-index: 1; 
