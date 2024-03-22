@@ -122,35 +122,35 @@ p {
     z-index: 1; 
 }
 
-.icon_collection_1 {
+#icon_collection_1 {
     transform: rotate(-45deg) translateY(-120px);
 }
 
-.icon_collection_2 {
+#icon_collection_2 {
     transform: rotate(-90deg) translateY(-120px);
 }
 
-.icon_collection_3 {
+#icon_collection_3 {
     transform: rotate(-135deg) translateY(-120px);
 }
 
-.icon_collection_4 {
+#icon_collection_4 {
     transform: rotate(-180deg) translateY(-120px);
 }
 
-.icon_collection_5 {
+#icon_collection_5 {
     transform: rotate(45deg) translateY(-120px);
 }
 
-#icon-box-6 {
+#icon_collection_6 {
     transform: rotate(90deg) translateY(-120px);
 }
 
-.icon_collection_7 {
+#icon_collection_7 {
     transform: rotate(135deg) translateY(-120px);
 }
 
-.icon_collection_8 {
+#icon_collection_8 {
     transform: rotate(0deg) translateY(-120px);
 }
 
