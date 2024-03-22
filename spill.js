@@ -232,3 +232,81 @@ const initializer = () => {
     console.log(cardValues); //viser i console
     matrixGenerator(cardValues);
 };
+
+//Highscore 
+const URL = "https://rasmusweb.no/hs.php";
+const GameID = "memory-game";
+
+async function getHighscore() {
+    const response = await fetch(URL + "?id=" + GameID, {
+        method: "GET",
+        headers: {
+            Accept: "application/json",
+        },
+    });
+
+    const highscoreData = await response.json();
+    return highscoreData;
+}
+
+async function saveHighscore(time, moves) {
+    const playerName = prompt("Gratulerer! Du har satt en highscore!\nSkriv inn navnet ditt:");
+
+    const data = {
+        id: GameID,
+        time: time,
+        moves: moves,
+        playerName: playerName,
+    };
+
+    const response = await fetch(URL, {
+        method: "POST",
+        headers: {
+            Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+    });
+
+    const responseData = await response.json();
+    console.log(responseData);
+}
+
+async function displayHighscore() {
+    const highscoreData = await getHighscore();
+
+    const highscoreContainer = document.getElementById("highscore-container");
+    highscoreContainer.innerHTML = ""; // fjerner eksisterende highscore date 
+
+    if (Array.isArray(highscoreData)) { // Sjekker om highscoreData er  array
+        const highscoreList = document.createElement("ol");
+
+        highscoreData.forEach((entry, index) => {
+            const listItem = document.createElement("li");
+            listItem.textContent = `${index + 1}. ${entry.playerName} - Tid: ${entry.time}, Trekk: ${entry.moves}`;
+            highscoreList.appendChild(listItem);
+        });
+
+        highscoreContainer.appendChild(highscoreList);
+    } else {
+        const noHighscoreMessage = document.createElement("p");
+        noHighscoreMessage.textContent = "Ingen highscore-data tilgjengelig.";
+        highscoreContainer.appendChild(noHighscoreMessage);
+    }
+}
+
+// Funk. for å oppdatere highscore når spillet er vunnet
+async function updateHighscore(time, moves) {
+    const highscoreData = await getHighscore();
+
+    // Hvis det ikke er noen highscore enda, eller hvis spillers poeng er bedre enn den dårligste highscoren
+    if (!highscoreData || highscoreData.length < 10 || (time < highscoreData[highscoreData.length - 1].time && moves < highscoreData[highscoreData.length - 1].moves)) {
+        saveHighscore(time, moves);
+    }
+
+    // Oppdaterer highscore 
+    displayHighscore();
+}
+
+// Kaller funksjonen når spillet er vunnet for å oppdatere highscore
+// Men tiden brukt og ant. trekk som parametere
+updateHighscore(minutes * 60 + seconds, movesCount);
