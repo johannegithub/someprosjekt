@@ -98,25 +98,13 @@ p {
     transform-origin: center bottom;
 }
 
-.icon i {
+#GDPR_sirkel i {
     font-size: 40px;
     color: skyblue;
     padding-bottom: 20px;
 }
 
-.icon h2,
-.icon p {
-    display: none;
-    position: relative;
-}
 
-.icon:hover h2,
-.icon:hover p {
-    z-index: 2;
-    display: block;
-    background-color: lightblue;
-    width: 600px;
-}
 
 .icon:not(:hover) {
     z-index: 1; 
