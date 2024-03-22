@@ -69,18 +69,18 @@ p {
     font-size: 20px;
 }
 
-#GDPR {
+#GDPR_sirkel {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     height: fit-content;
-    height: 800px;
+    height: 500px;
 }
 
 #main-image {
     margin-top: 70px;
-    height: 380px;
+    height: 300px;
 }
 
 .image-container {
@@ -118,35 +118,35 @@ p {
 }
 
 #icon-box-1 {
-    transform: rotate(-45deg) translateY(-180px);
+    transform: rotate(-45deg) translateY(-120px);
 }
 
 #icon-box-2 {
-    transform: rotate(-90deg) translateY(-180px);
+    transform: rotate(-90deg) translateY(-120px);
 }
 
 #icon-box-3 {
-    transform: rotate(-135deg) translateY(-180px);
+    transform: rotate(-135deg) translateY(-120px);
 }
 
 #icon-box-4 {
-    transform: rotate(-180deg) translateY(-180px);
+    transform: rotate(-180deg) translateY(-120px);
 }
 
 #icon-box-5 {
-    transform: rotate(45deg) translateY(-180px);
+    transform: rotate(45deg) translateY(-120px);
 }
 
 #icon-box-6 {
-    transform: rotate(90deg) translateY(-180px);
+    transform: rotate(90deg) translateY(-120px);
 }
 
 #icon-box-7 {
-    transform: rotate(135deg) translateY(-180px);
+    transform: rotate(135deg) translateY(-120px);
 }
 
 #icon-box-8 {
-    transform: rotate(0deg) translateY(-180px);
+    transform: rotate(0deg) translateY(-120px);
 }
 
 
