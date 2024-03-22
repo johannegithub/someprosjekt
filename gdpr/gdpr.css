@@ -118,11 +118,12 @@ p {
 .hidden_box i {
     color: #012A4A;
     font-size: 100px;
+    padding-left: 20px;
 }
 
 .box_grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 150px;
     width: 400px;
 }
 
