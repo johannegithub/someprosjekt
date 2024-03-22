@@ -70,83 +70,82 @@ p {
 }
 
 #GDPR {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#GDPR_sirkel {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     height: fit-content;
-    height: 800px;
+    height: 500px;
 }
 
 #main-image {
     margin-top: 70px;
-    height: 380px;
+    height: 300px;
 }
 
 .image-container {
     position: relative;
 }
 
-.icon-box {
+.icon {
     position: absolute;
     text-align: center;
     transform-origin: center bottom;
 }
 
-.icon-box i {
+#GDPR_sirkel i {
     font-size: 40px;
     color: skyblue;
     padding-bottom: 20px;
 }
 
-.icon-box h2,
-.icon-box p {
+.hidden_box {
     display: none;
-    position: relative;
 }
 
-.icon-box:hover h2,
-.icon-box:hover p {
-    z-index: 2;
+.active_box {
     display: block;
-    background-color: lightblue;
-    width: 600px;
 }
 
-.icon-box:not(:hover) {
+.icon:not(:hover) {
     z-index: 1; 
 }
 
-#icon-box-1 {
-    transform: rotate(-45deg) translateY(-180px);
+#icon_collection_1 {
+    transform: rotate(-45deg) translateY(-120px);
 }
 
-#icon-box-2 {
-    transform: rotate(-90deg) translateY(-180px);
+#icon_collection_2 {
+    transform: rotate(-90deg) translateY(-120px);
 }
 
-#icon-box-3 {
-    transform: rotate(-135deg) translateY(-180px);
+#icon_collection_3 {
+    transform: rotate(-135deg) translateY(-120px);
 }
 
-#icon-box-4 {
-    transform: rotate(-180deg) translateY(-180px);
+#icon_collection_4 {
+    transform: rotate(-180deg) translateY(-120px);
 }
 
-#icon-box-5 {
-    transform: rotate(45deg) translateY(-180px);
+#icon_collection_5 {
+    transform: rotate(45deg) translateY(-120px);
 }
 
-#icon-box-6 {
-    transform: rotate(90deg) translateY(-180px);
+#icon_collection_6 {
+    transform: rotate(90deg) translateY(-120px);
 }
 
-#icon-box-7 {
-    transform: rotate(135deg) translateY(-180px);
+#icon_collection_7 {
+    transform: rotate(135deg) translateY(-120px);
 }
 
-#icon-box-8 {
-    transform: rotate(0deg) translateY(-180px);
+#icon_collection_8 {
+    transform: rotate(0deg) translateY(-120px);
 }
 
 
