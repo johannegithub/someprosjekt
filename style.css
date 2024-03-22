@@ -191,9 +191,7 @@ footer i {
     #footer h4,p:first-of-type {
         padding: 5px;
     }
-  
 }
-
 
 @media only screen and (max-width: 600px){
     main{
@@ -207,7 +205,6 @@ footer i {
         font-size: 11px;
     }
 }
-
 
 .nav-toggle {
     display: none;
