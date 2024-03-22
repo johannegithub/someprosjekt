@@ -85,7 +85,7 @@ p {
 
 #main-image {
     margin-top: 70px;
-    height: 300px;
+    height: 200px;
 }
 
 .image-container {
@@ -106,6 +106,25 @@ p {
 
 .hidden_box {
     display: none;
+    width: 500px;
+    padding-left: 50px;
+    padding-top: 150px;
+}
+
+.hidden_box h2 {
+    font-size: 30px;
+    color: #012A4A;
+}
+.hidden_box i {
+    color: #012A4A;
+    font-size: 100px;
+    padding-left: 20px;
+}
+
+.box_grid {
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    width: 400px;
 }
 
 .active_box {
@@ -117,35 +136,35 @@ p {
 }
 
 #icon_collection_1 {
-    transform: rotate(-45deg) translateY(-120px);
+    transform: rotate(-45deg) translateY(-80px);
 }
 
 #icon_collection_2 {
-    transform: rotate(-90deg) translateY(-120px);
+    transform: rotate(-90deg) translateY(-80px);
 }
 
 #icon_collection_3 {
-    transform: rotate(-135deg) translateY(-120px);
+    transform: rotate(-135deg) translateY(-80px);
 }
 
 #icon_collection_4 {
-    transform: rotate(-180deg) translateY(-120px);
+    transform: rotate(-180deg) translateY(-80px);
 }
 
 #icon_collection_5 {
-    transform: rotate(45deg) translateY(-120px);
+    transform: rotate(45deg) translateY(-80px);
 }
 
 #icon_collection_6 {
-    transform: rotate(90deg) translateY(-120px);
+    transform: rotate(90deg) translateY(-80px);
 }
 
 #icon_collection_7 {
-    transform: rotate(135deg) translateY(-120px);
+    transform: rotate(135deg) translateY(-80px);
 }
 
 #icon_collection_8 {
-    transform: rotate(0deg) translateY(-120px);
+    transform: rotate(0deg) translateY(-80px);
 }
 
 
