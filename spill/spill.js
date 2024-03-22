@@ -20,18 +20,18 @@ let secondCard = false;
 
 // Lager items array med bildeinfo
 const items = [
-    { name: "facebook", image: "bilder/facebook.png" },
-    { name: "snap", image: "bilder/snapchat.png" },
-    { name: "tiktok", image: "bilder/tiktok.png" },
-    { name: "pintrest", image: "bilder/pintrest.png" },
-    { name: "instagram", image: "bilder/instagram.png" },
-    { name: "whatsapp", image: "bilder/whatsapp.png" },
-    { name: "twitter", image: "bilder/twitter.png" },
-    { name: "facetime", image: "bilder/facetime.png" },
-    { name: "skype", image: "bilder/skype.png" },
-    { name: "messenger", image: "bilder/messenger.png" },
-    { name: "youtube", image: "bilder/youtube.png" },
-    { name: "vine", image: "bilder/vine.png" },
+    { name: "facebook", image: "../bilder/facebook.png" },
+    { name: "snap", image: "../bilder/snapchat.png" },
+    { name: "tiktok", image: "../bilder/tiktok.png" },
+    { name: "pintrest", image: "../bilder/pintrest.png" },
+    { name: "instagram", image: "../bilder/instagram.png" },
+    { name: "whatsapp", image: "../bilder/whatsapp.png" },
+    { name: "twitter", image: "../bilder/twitter.png" },
+    { name: "facetime", image: "../bilder/facetime.png" },
+    { name: "skype", image: "../bilder/skype.png" },
+    { name: "messenger", image: "../bilder/messenger.png" },
+    { name: "youtube", image: "../bilder/youtube.png" },
+    { name: "vine", image: "../bilder/vine.png" },
 ];
 
 // Initialiserer tid og tellevariabler
