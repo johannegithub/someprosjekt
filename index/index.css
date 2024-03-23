@@ -61,6 +61,10 @@
     color: var(--quaternary-color)
 }
 
+#ulovlig {
+    display: none;
+}
+
 #nettmobbing div {
     margin: 5px; 
     padding: 15px; 
