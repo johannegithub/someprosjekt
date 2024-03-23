@@ -14,6 +14,33 @@ body {
     color: black
 }
 
+#hero {
+    background-image: linear-gradient(rgb(0 0 0 / 15%), rgb(0 0 0 / 50%)), url("../bilder/Bak_img.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: fit-content;
+    padding: 250px 250px;
+    margin-top: 80px;
+    margin-bottom: -25px;
+}
+
+.lesMer {
+    display: flex;
+    justify-content: center;
+    margin-top: -25px;
+}
+
+.scroll-btn {
+    background-color: white;
+    padding: 10px;
+    color: darkblue;
+    text-shadow: 2px 2px 1px lightgray;
+    border: none;
+    font-size: 20px;
+    font-family: 'Comfortaa', sans-serif;
+}
+
 section:nth-child(1) {
     margin-bottom: 75px;
 }
@@ -43,16 +70,6 @@ section {
     padding-bottom: 15px;
     padding-left: 15px;
     background-color: white;
-}
-
-#hero {
-    background-image: linear-gradient(rgb(0 0 0 / 15%), rgb(0 0 0 / 50%)), url("../bilder/Bak_img.jpeg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: fit-content;
-    padding: 250px 250px;
-    margin-top: 80px;
 }
 
 h1 {

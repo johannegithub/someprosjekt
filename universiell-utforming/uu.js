@@ -1,3 +1,8 @@
+const btn = document.querySelector(".scroll-btn")
+
+btn.addEventListener("click", () => {
+    window.scrollTo(0,700)
+    });
 
 function myFunction() {
     var element = document.body;
