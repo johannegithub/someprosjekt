@@ -182,7 +182,6 @@ p {
 @media only screen and (max-width: 900px) {
     .uu {
         margin: 15px;
-        margin-top: 20px;
     }
 
     h1 {
@@ -242,6 +241,11 @@ p {
 }
 
 @media only screen and (max-width: 600px) {
+
+    .lesMer {
+        margin-bottom: 150px;
+    }
+
     h1 {
         font-size: 40px;
     }

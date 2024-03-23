@@ -1,7 +1,10 @@
 const btn = document.querySelector(".scroll-btn")
 
 btn.addEventListener("click", () => {
-    window.scrollTo(0,700)
+    window.scrollTo({
+        top: 700,
+        behavior: "smooth"
+    })
     });
 
 function myFunction() {
