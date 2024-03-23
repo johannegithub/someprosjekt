@@ -34,6 +34,7 @@ body {
   
   }
 
+
 /* Nav-bar */
 
 header {
@@ -67,7 +68,7 @@ nav {
 
 .right-sections ul {
     list-style-type: none;
-    margin-right: 20px;
+    margin-right: 0px;
     font-family: 'Comfortaa', sans-serif;
 }
 
@@ -85,6 +86,41 @@ nav {
 .right-sections ul li a:hover {
     text-decoration: underline;
 }
+
+nav{
+    display: flex;
+    flex-direction: row;
+}
+
+.logo i {
+    margin-left: 0px;
+}
+
+@media screen and (max-width: 730px) {
+    .right-sections ul {
+        background-color: #012A4A; /* Legg til bakgrunnsfarge for hamburgermeny */
+        position: absolute;
+        top: 60px; /* Juster topposisjonen etter behov */
+        right: 0;
+        width: 100%;
+        text-align: center;
+        display: none; /* Skjuler lenkene i hamburgermeny som standard */
+    }
+
+    .right-sections ul.active {
+        display: block; /* Viser lenkene i hamburgermeny når den er aktivert */
+    }
+
+    .right-sections ul li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .nav-toggle {
+        display: block; /* Viser hamburgermeny-ikonet på mindre skjermer */
+    }
+}
+
 
 /* Footer */
 footer {
@@ -155,24 +191,7 @@ footer i {
     #footer h4,p:first-of-type {
         padding: 5px;
     }
-
-    nav{
-        display: flex;
-        flex-direction: column;
-    }
-
-    div.right-sections ul li a {
-        padding: 12px;
-        font-size: 12px;
-    }
-
-    .logo i {
-        margin-left: 0px;
-    }
-
 }
-
-
 
 @media only screen and (max-width: 600px){
     main{
@@ -180,9 +199,18 @@ footer i {
     }
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 600px){
     div.right-sections ul li a{
         padding: 7px;
         font-size: 11px;
     }
+}
+
+.nav-toggle {
+    display: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 20px; /* Juster avstanden etter behov */
+    
 }
