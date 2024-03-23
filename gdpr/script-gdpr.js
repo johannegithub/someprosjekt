@@ -43,12 +43,36 @@ function scrollToSection(sectionId) {
 }
 
 // GDPR SIKELEN
-let icon_array = [icon_collection_1, icon_collection_2, icon_collection_3, icon_collection_4, icon_collection_5, icon_collection_6, icon_collection_7, icon_collection_8]
-let ikoner = document.querySelectorAll(".icon")
 const icon_1 = document.getElementById("icon_collection_1")
+const box_1 = document.getElementById("icon_box_1")
+const icon_2 = document.getElementById("icon_collection_2")
+const box_2 = document.getElementById("icon_box_2")
+const icon_3 = document.getElementById("icon_collection_3")
+const box_3 = document.getElementById("icon_box_3")
+const icon_4 = document.getElementById("icon_collection_4")
+const box_4 = document.getElementById("icon_box_4")
+const icon_5 = document.getElementById("icon_collection_5")
+const box_5 = document.getElementById("icon_box_5")
+const icon_6 = document.getElementById("icon_collection_6")
+const box_6 = document.getElementById("icon_box_6")
+const icon_7 = document.getElementById("icon_collection_7")
+const box_7 = document.getElementById("icon_box_7")
+const icon_8 = document.getElementById("icon_collection_8")
+const box_8 = document.getElementById("icon_box_8")
 
-icon_1.addEventListener("click", hoverIkoner)
+let icon_array = [icon_1, icon_2, icon_3, icon_4, icon_5, icon_6, icon_7, icon_8]
+
+icon_1.addEventListener("mouseover", hoverIkoner)
+icon_1.addEventListener("mouseout", avIkoner)
 
 function hoverIkoner() {
-    icon_1.classList.add("active_icon");
+    box_1.classList.add("active_box")
+    icon_1.style.color = "#012A4A"
+    icon_1.style.fontSize = "50px"
+}
+
+function avIkoner() {
+    box_1.classList.remove("active_box")
+    icon_1.style.color = "skyblue"
+    icon_1.style.fontSize = "40px"
 }
