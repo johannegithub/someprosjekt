@@ -18,7 +18,6 @@ let interval;
 let firstCard = false;
 let secondCard = false;
 
-
 // Lager items array med bildeinfo
 const items = [
     { name: "facebook", image: "../bilder/game-logos/facebook.png" },
@@ -223,7 +222,7 @@ function stopGame() {
     startButton.classList.remove("hide");
     clearInterval(interval);
 
-    playSound(clickSound); // Spiller av stopplyden ved stop
+    playSound(clickSound); // Spiller av stopplyden ved stopp
 }
 
 // Initialiser verdier og funk. anrop
@@ -238,7 +237,7 @@ const initializer = () => {
 
 //Highscore 
 const URL = "https://rasmusweb.no/hs.php";
-const GameID = "memorygame2";
+const GameID = "memorygame3";
 let highscore = 0; // Her lagrer vi highscore
 let playerName = ""; // og spilleren
 getHighscore();
@@ -281,6 +280,7 @@ async function saveHighscore(time, moves) {
     console.log(responseData);
 }
 
+
 // Funk. for å oppdatere highscore når spillet er vunnet
 async function updateHighscore(time, moves) {
 
@@ -304,4 +304,3 @@ function displayHighscore() {
         hsScore.textContent = "";
     }
 }
-
