@@ -38,9 +38,39 @@
     grid-column: span 2;
 }
 
+#paragraf i, #ulovlig i {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#paragraf i {
+    padding: 20px;
+    font-size: 120px;
+    color: var(--secondary-color)
+}
+
+#nettmobbing div:nth-of-type(5) {
+    grid-column: span 2;
+    margin-bottom: 45px;
+}
+
+#ulovlig i  {
+    padding: 20px;
+    font-size: 120px;
+    color: var(--quaternary-color)
+}
+
+#ulovlig {
+    display: none;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
 #nettmobbing div {
     margin: 5px; 
-    padding: 15px; 
+    margin-bottom: 10px;
+    padding: 25px; 
 }
 
 #ressurser {

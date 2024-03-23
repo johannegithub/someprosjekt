@@ -20,18 +20,18 @@ let secondCard = false;
 
 // Lager items array med bildeinfo
 const items = [
-    { name: "facebook", image: "bilder/facebook.png" },
-    { name: "snap", image: "bilder/snapchat.png" },
-    { name: "tiktok", image: "bilder/tiktok.png" },
-    { name: "pintrest", image: "bilder/pintrest.png" },
-    { name: "instagram", image: "bilder/instagram.png" },
-    { name: "whatsapp", image: "bilder/whatsapp.png" },
-    { name: "twitter", image: "bilder/twitter.png" },
-    { name: "facetime", image: "bilder/facetime.png" },
-    { name: "skype", image: "bilder/skype.png" },
-    { name: "messenger", image: "bilder/messenger.png" },
-    { name: "youtube", image: "bilder/youtube.png" },
-    { name: "vine", image: "bilder/vine.png" },
+    { name: "facebook", image: "../bilder/game-logos/facebook.png" },
+    { name: "snap", image: "../bilder/game-logos/snapchat.png" },
+    { name: "tiktok", image: "../bilder/game-logos/tiktok.png" },
+    { name: "pintrest", image: "../bilder/game-logos/pintrest.png" },
+    { name: "instagram", image: "../bilder/game-logos/instagram.png" },
+    { name: "whatsapp", image: "../bilder/game-logos/whatsapp.png" },
+    { name: "twitter", image: "../bilder/game-logos/twitter.png" },
+    { name: "facetime", image: "../bilder/game-logos/facetime.png" },
+    { name: "skype", image: "../bilder/game-logos/skype.png" },
+    { name: "messenger", image: "../bilder/game-logos/messenger.png" },
+    { name: "youtube", image: "../bilder/game-logos/youtube.png" },
+    { name: "vine", image: "../bilder/game-logos/vine.png" },
 ];
 
 // Initialiserer tid og tellevariabler
@@ -144,6 +144,8 @@ const matrixGenerator = (cardValues, size = 4) => {
 
                             // Spill av celebrationSound når alle par er matchet, og spillet er vunnet
                             playSound(celebrationSound);
+
+                            updateHighscore(minutes * 60 + seconds, movesCount);
                         }
                         else {
                             playSound(winSound);
@@ -235,7 +237,10 @@ const initializer = () => {
 
 //Highscore 
 const URL = "https://rasmusweb.no/hs.php";
-const GameID = "memory-game";
+const GameID = "memorygame3";
+let highscore = 0; // Her lagrer vi highscore
+let playerName = ""; // og spilleren
+getHighscore();
 
 async function getHighscore() {
     const response = await fetch(URL + "?id=" + GameID, {
@@ -246,17 +251,24 @@ async function getHighscore() {
     });
 
     const highscoreData = await response.json();
-    return highscoreData;
+    console.log(highscoreData)
+    if (highscoreData) {
+        highscore = Number(highscoreData.hs);
+        playerName = highscoreData.player;
+        displayHighscore();
+    }
 }
 
 async function saveHighscore(time, moves) {
-    const playerName = prompt("Gratulerer! Du har satt en highscore!\nSkriv inn navnet ditt:");
+    let playerName = prompt("Gratulerer! Du har satt en highscore!\nSkriv inn navnet ditt:");
+
+    // Setter navn som Anonym dersom spilleren ikke skriver inn navn
+    playerName = playerName.trim() !== "" ? playerName : "Anonym";
 
     const data = {
         id: GameID,
-        time: time,
-        moves: moves,
-        playerName: playerName,
+        hs: time,
+        player: playerName,
     };
 
     const response = await fetch(URL, {
@@ -271,42 +283,27 @@ async function saveHighscore(time, moves) {
     console.log(responseData);
 }
 
-async function displayHighscore() {
-    const highscoreData = await getHighscore();
-
-    const highscoreContainer = document.getElementById("highscore-container");
-    highscoreContainer.innerHTML = ""; // fjerner eksisterende highscore date 
-
-    if (Array.isArray(highscoreData)) { // Sjekker om highscoreData er  array
-        const highscoreList = document.createElement("ol");
-
-        highscoreData.forEach((entry, index) => {
-            const listItem = document.createElement("li");
-            listItem.textContent = `${index + 1}. ${entry.playerName} - Tid: ${entry.time}, Trekk: ${entry.moves}`;
-            highscoreList.appendChild(listItem);
-        });
-
-        highscoreContainer.appendChild(highscoreList);
-    } else {
-        const noHighscoreMessage = document.createElement("p");
-        noHighscoreMessage.textContent = "Ingen highscore-data tilgjengelig.";
-        highscoreContainer.appendChild(noHighscoreMessage);
-    }
-}
 
 // Funk. for å oppdatere highscore når spillet er vunnet
 async function updateHighscore(time, moves) {
-    const highscoreData = await getHighscore();
 
     // Hvis det ikke er noen highscore enda, eller hvis spillers poeng er bedre enn den dårligste highscoren
-    if (!highscoreData || highscoreData.length < 10 || (time < highscoreData[highscoreData.length - 1].time && moves < highscoreData[highscoreData.length - 1].moves)) {
+    if (!highscore || highscore > time ) {
         saveHighscore(time, moves);
     }
-
-    // Oppdaterer highscore 
-    displayHighscore();
 }
 
-// Kaller funksjonen når spillet er vunnet for å oppdatere highscore
-// Men tiden brukt og ant. trekk som parametere
-updateHighscore(minutes * 60 + seconds, movesCount);
+function displayHighscore() {
+    const hsName = document.getElementById("hs-name");
+    const hsScore = document.getElementById("hs-score");
+
+    if (playerName && !isNaN(highscore)) {
+        const minutes = Math.floor(highscore / 60);
+        const seconds = highscore % 60;
+        hsName.textContent = playerName;
+        hsScore.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    } else {
+        hsName.textContent = "";
+        hsScore.textContent = "";
+    }
+}
