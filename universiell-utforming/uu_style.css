@@ -1,17 +1,17 @@
 :root {
     --primary-color: #012A4A;
-    --secondary-color:#01497C;
+    --secondary-color: #01497C;
     --tertiary-color: #61A5C2;
-    --quaternary-color:#89C2D9;
+    --quaternary-color: #89C2D9;
     --quinary-color: #fed9f6;
-    --senary-color: #cd4883d9; 
-    --septenary-color: #fef0fa; 
-  }
+    --senary-color: #cd4883d9;
+    --septenary-color: #fef0fa;
+}
 
 
 body {
     background-color: ghostwhite;
-    color:black
+    color: black
 }
 
 section:nth-child(1) {
@@ -20,11 +20,11 @@ section:nth-child(1) {
 
 .dark-mode {
     background-color: black;
-    color:white
+    color: white
 }
 
 button {
-    padding:10px;
+    padding: 10px;
     background-color: white;
     color: black;
     font-size: 15px;
@@ -46,7 +46,7 @@ section {
 }
 
 #hero {
-    background-image: linear-gradient(rgb(0 0 0 / 15%), rgb(0 0 0 / 50%)),url("../bilder/Bak_img.jpeg");
+    background-image: linear-gradient(rgb(0 0 0 / 15%), rgb(0 0 0 / 50%)), url("../bilder/Bak_img.jpeg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -73,7 +73,7 @@ h2 {
 }
 
 h3 {
-    font-size:50px;
+    font-size: 50px;
     text-shadow: 2px 2px 2px lightgrey;
 }
 
@@ -152,6 +152,16 @@ p {
     border-width: medium;
 }
 
+@media only screen and (max-width: 1000px) {
+    #hero {
+        padding: 200px 200px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+}
+
 @media only screen and (max-width: 900px) {
     .uu {
         margin: 15px;
@@ -159,10 +169,10 @@ p {
     }
 
     h1 {
-        font-size: 70px;
+        font-size: 55px;
         width: auto;
     }
-  
+
     button {
         padding: 5px;
         font-size: 15px;
@@ -175,7 +185,7 @@ p {
     p {
         font-size: 17px;
     }
-  
+
     .boks {
         display: grid;
         grid-template-rows: 2fr 1.3fr;
@@ -196,32 +206,49 @@ p {
         padding-bottom: 0px;
     }
 
-    .uu i{
+    .uu i {
         padding-top: 0px;
         padding-top: 0px;
         padding-bottom: 5px;
     }
 
-  }
+}
 
-  @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
+    #hero {
+        padding: 170px 150px;
+    }
+
     h1 {
         font-size: 40px;
     }
-  
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 40px;
+    }
+
     button {
-        padding: 3px;
-        font-size: 8px;
+        padding: 5px;
+        font-size: 10px;
     }
 
     h2 {
-        font-size: 20px;
+        font-size: 25px;
     }
 
     p {
-        font-size: 12px;
+        font-size: 15px;
     }
+
     #hero {
-        padding: 150px 45px;
-      }
-  }
+        padding: 150px 47px;
+    }
+
+    .boks {
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+    }
+
+}
