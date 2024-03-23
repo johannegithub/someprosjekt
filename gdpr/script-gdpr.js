@@ -45,9 +45,10 @@ function scrollToSection(sectionId) {
 // GDPR SIKELEN
 let icon_array = [icon_collection_1, icon_collection_2, icon_collection_3, icon_collection_4, icon_collection_5, icon_collection_6, icon_collection_7, icon_collection_8]
 let ikoner = document.querySelectorAll(".icon")
+const icon_1 = document.getElementById("icon_collection_1")
 
-document.icon_array.addEventListener("click", hoverIkoner)
+icon_1.addEventListener("click", hoverIkoner)
 
 function hoverIkoner() {
-    document.ikoner.style.color = "red"
+    icon_1.classList.add("active_icon");
 }

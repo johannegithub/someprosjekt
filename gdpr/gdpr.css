@@ -129,6 +129,11 @@ p {
     display: block;
 }
 
+.active_icon {
+    color: #012A4A;
+    font-size: 50px;
+}
+
 .icon:not(:hover) {
     z-index: 1; 
 }
