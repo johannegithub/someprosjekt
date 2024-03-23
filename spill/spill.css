@@ -19,6 +19,27 @@
   box-sizing: border-box;
 }
 
+#hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../bilder/game.png);
+  color: var(--hero-font-color);
+  background-size: cover;
+  background-position: center;
+  padding: 250px 200px;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+h1 {
+  font-size: 65px;
+  text-align: center;
+  text-shadow: 3px 3px 3px grey;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: rgb(255, 255, 255);
+  font-family: 'Comfortaa', sans-serif;
+  width: 500px;
+}
+
 .wrapper {
   box-sizing: content-box;
   width: 430px;
@@ -28,7 +49,7 @@
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
-  top: 50%;
+  top: 1080px;
   border-radius: 15px;
   box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
 }
@@ -124,7 +145,7 @@
   width: 100%;
   height: 815px;
   background-color: var(--quinary-color);
-  top: 0;
+  top: 680px;
 }
 
 button {
@@ -169,7 +190,7 @@ img {
 }
 
 /* Kort */
-h2 {
+.fenomentitle {
   text-align: center;
 }
 
@@ -217,6 +238,7 @@ i {
   height: 350px;
   border: 1px solid var(--senary-color);
   perspective: 1000px;
+  cursor: pointer;
 }
 
 .flip-card-inner {
@@ -263,6 +285,23 @@ i {
 
   #highscore-container {
     margin-top: 850px;
+    width: 500px;
+  }
+
+.game-boxes {
+  display: grid;
+  justify-content: center;
+}
+}
+
+@media only screen and (max-width: 887px) {
+  .instructions {
+    margin: 30px;
+    width: 500px;
+  }
+
+  #highscore-container {
+    margin-top: 750px;
     width: 500px;
   }
 
