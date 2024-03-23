@@ -43,10 +43,10 @@ function scrollToSection(sectionId) {
 }
 
 // GDPR SIKELEN
-let ikon_array = [icon_collection_1, icon_collection_2, icon_collection_3, icon_collection_4, icon_collection_5, icon_collection_6, icon_collection_7, icon_collection_8]
+let icon_array = [icon_collection_1, icon_collection_2, icon_collection_3, icon_collection_4, icon_collection_5, icon_collection_6, icon_collection_7, icon_collection_8]
 let ikoner = document.querySelectorAll(".icon")
 
-document.ikoner.addEventListener("click", hoverIkoner)
+document.icon_array.addEventListener("click", hoverIkoner)
 
 function hoverIkoner() {
     document.ikoner.style.color = "red"
