@@ -18,6 +18,7 @@ let interval;
 let firstCard = false;
 let secondCard = false;
 
+
 // Lager items array med bildeinfo
 const items = [
     { name: "facebook", image: "../bilder/game-logos/facebook.png" },
@@ -222,16 +223,7 @@ function stopGame() {
     startButton.classList.remove("hide");
     clearInterval(interval);
 
-    playSound(clickSound); // Spiller av stopplyden ved stopp
-
-
-    //  TODO!!!!!!
-    // ------------------
-    // ------------------
-    // Dette skal flyttes til der man har vunnet (ferdig)
-    // Kaller funksjonen når spillet er vunnet for å oppdatere highscore
-    // Men tiden brukt og ant. trekk som parametere
-
+    playSound(clickSound); // Spiller av stopplyden ved stop
 }
 
 // Initialiser verdier og funk. anrop
@@ -299,9 +291,6 @@ async function updateHighscore(time, moves) {
 }
 
 function displayHighscore() {
-    // Viser navn på spiller og aktuell HS som ligger lagret i 
-    //    highscore 
-    //    playerName
-    document.getElementById("hs-score").innerHTML = highscore
-    document.getElementById("hs-name").innerHTML = playerName
+    document.getElementById("hs-name").textContent = playerName;
+    document.getElementById("hs-score").textContent = highscore;
 }
