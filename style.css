@@ -93,12 +93,12 @@ nav{
 }
 
 .logo i {
-    margin-left: 0px;
+    margin-left: 20px;
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 760px) {
     .right-sections ul {
-        background-color: #012A4A; /* Legg til bakgrunnsfarge for hamburgermeny */
+        background-color:#012A4A; /* Legg til bakgrunnsfarge for hamburgermeny */
         position: absolute;
         top: 60px; /* Juster topposisjonen etter behov */
         right: 0;
@@ -118,6 +118,15 @@ nav{
 
     .nav-toggle {
         display: block; /* Viser hamburgermeny-ikonet på mindre skjermer */
+    }
+
+    .nav-toggle {
+        display: none;
+        color: #ffffff;
+        font-size: 24px;
+        cursor: pointer;
+        margin-right: 20px; /* Juster avstanden etter behov */
+        
     }
 }
 
@@ -189,7 +198,7 @@ footer i {
     }
 
     #footer h4,p:first-of-type {
-        padding: 5px;
+        padding: 0px;
     }
 }
 
@@ -204,13 +213,22 @@ footer i {
         padding: 7px;
         font-size: 11px;
     }
+
 }
 
+
+
+
 .nav-toggle {
-    display: none;
+    display: block; /* Viser hamburgermeny-ikonet på alle skjermer */
     color: #ffffff;
     font-size: 24px;
     cursor: pointer;
     margin-right: 20px; /* Juster avstanden etter behov */
-    
+}
+
+@media screen and (min-width: 760px) {
+    .nav-toggle {
+        display: none; /* Skjuler hamburgermeny-ikonet på større skjermer */
+    }
 }
