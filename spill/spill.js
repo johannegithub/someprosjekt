@@ -291,6 +291,17 @@ async function updateHighscore(time, moves) {
 }
 
 function displayHighscore() {
-    document.getElementById("hs-name").textContent = playerName;
-    document.getElementById("hs-score").textContent = highscore;
+    const hsName = document.getElementById("hs-name");
+    const hsScore = document.getElementById("hs-score");
+
+    if (playerName && !isNaN(highscore)) {
+        const minutes = Math.floor(highscore / 60);
+        const seconds = highscore % 60;
+        hsName.textContent = playerName;
+        hsScore.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    } else {
+        hsName.textContent = "";
+        hsScore.textContent = "";
+    }
 }
+
