@@ -45,12 +45,26 @@ section {
     background-color: white;
 }
 
+#hero {
+    background-image: linear-gradient(rgb(0 0 0 / 15%), rgb(0 0 0 / 50%)),url("../bilder/Bak_img.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: fit-content;
+    padding: 250px 250px;
+    margin-top: 80px;
+}
+
 h1 {
     font-size: 65px;
     text-align: center;
-    margin-bottom: 50px;
-    margin-top: 30px;
     text-shadow: 3px 3px 3px grey;
+    background-color: rgba(0, 0, 0, 60%);
+    color: rgb(255, 255, 255);
+    font-family: 'Comfortaa', sans-serif;
+    display: flex;
+    justify-content: center;
+    width: auto;
 }
 
 h2 {
@@ -141,11 +155,12 @@ p {
 @media only screen and (max-width: 900px) {
     .uu {
         margin: 15px;
-        margin-top: 200px;
+        margin-top: 20px;
     }
 
     h1 {
         font-size: 70px;
+        width: auto;
     }
   
     button {
@@ -206,4 +221,7 @@ p {
     p {
         font-size: 12px;
     }
+    #hero {
+        padding: 150px 45px;
+      }
   }
