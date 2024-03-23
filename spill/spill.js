@@ -260,7 +260,10 @@ async function getHighscore() {
 }
 
 async function saveHighscore(time, moves) {
-    const playerName = prompt("Gratulerer! Du har satt en highscore!\nSkriv inn navnet ditt:");
+    let playerName = prompt("Gratulerer! Du har satt en highscore!\nSkriv inn navnet ditt:");
+
+    // Setter navn som Anonym dersom spilleren ikke skriver inn navn
+    playerName = playerName.trim() !== "" ? playerName : "Anonym";
 
     const data = {
         id: GameID,
