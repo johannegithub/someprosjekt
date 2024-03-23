@@ -144,6 +144,8 @@ const matrixGenerator = (cardValues, size = 4) => {
 
                             // Spill av celebrationSound når alle par er matchet, og spillet er vunnet
                             playSound(celebrationSound);
+
+                            updateHighscore(minutes * 60 + seconds, movesCount);
                         }
                         else {
                             playSound(winSound);
@@ -221,6 +223,15 @@ function stopGame() {
     clearInterval(interval);
 
     playSound(clickSound); // Spiller av stopplyden ved stopp
+
+
+    //  TODO!!!!!!
+    // ------------------
+    // ------------------
+    // Dette skal flyttes til der man har vunnet (ferdig)
+    // Kaller funksjonen når spillet er vunnet for å oppdatere highscore
+    // Men tiden brukt og ant. trekk som parametere
+
 }
 
 // Initialiser verdier og funk. anrop
@@ -235,7 +246,10 @@ const initializer = () => {
 
 //Highscore 
 const URL = "https://rasmusweb.no/hs.php";
-const GameID = "memory-game";
+const GameID = "memorygame2";
+let highscore = 0; // Her lagrer vi highscore
+let playerName = ""; // og spilleren
+getHighscore();
 
 async function getHighscore() {
     const response = await fetch(URL + "?id=" + GameID, {
@@ -246,7 +260,12 @@ async function getHighscore() {
     });
 
     const highscoreData = await response.json();
-    return highscoreData;
+    console.log(highscoreData)
+    if (highscoreData) {
+        highscore = Number(highscoreData.hs);
+        playerName = highscoreData.player;
+        displayHighscore();
+    }
 }
 
 async function saveHighscore(time, moves) {
@@ -254,9 +273,8 @@ async function saveHighscore(time, moves) {
 
     const data = {
         id: GameID,
-        time: time,
-        moves: moves,
-        playerName: playerName,
+        hs: time,
+        player: playerName,
     };
 
     const response = await fetch(URL, {
@@ -271,42 +289,19 @@ async function saveHighscore(time, moves) {
     console.log(responseData);
 }
 
-async function displayHighscore() {
-    const highscoreData = await getHighscore();
-
-    const highscoreContainer = document.getElementById("highscore-container");
-    highscoreContainer.innerHTML = ""; // fjerner eksisterende highscore date 
-
-    if (Array.isArray(highscoreData)) { // Sjekker om highscoreData er  array
-        const highscoreList = document.createElement("ol");
-
-        highscoreData.forEach((entry, index) => {
-            const listItem = document.createElement("li");
-            listItem.textContent = `${index + 1}. ${entry.playerName} - Tid: ${entry.time}, Trekk: ${entry.moves}`;
-            highscoreList.appendChild(listItem);
-        });
-
-        highscoreContainer.appendChild(highscoreList);
-    } else {
-        const noHighscoreMessage = document.createElement("p");
-        noHighscoreMessage.textContent = "Ingen highscore-data tilgjengelig.";
-        highscoreContainer.appendChild(noHighscoreMessage);
-    }
-}
-
 // Funk. for å oppdatere highscore når spillet er vunnet
 async function updateHighscore(time, moves) {
-    const highscoreData = await getHighscore();
 
     // Hvis det ikke er noen highscore enda, eller hvis spillers poeng er bedre enn den dårligste highscoren
-    if (!highscoreData || highscoreData.length < 10 || (time < highscoreData[highscoreData.length - 1].time && moves < highscoreData[highscoreData.length - 1].moves)) {
+    if (!highscore || highscore > time ) {
         saveHighscore(time, moves);
     }
-
-    // Oppdaterer highscore 
-    displayHighscore();
 }
 
-// Kaller funksjonen når spillet er vunnet for å oppdatere highscore
-// Men tiden brukt og ant. trekk som parametere
-updateHighscore(minutes * 60 + seconds, movesCount);
+function displayHighscore() {
+    // Viser navn på spiller og aktuell HS som ligger lagret i 
+    //    highscore 
+    //    playerName
+    document.getElementById("hs-score").innerHTML = highscore
+    document.getElementById("hs-name").innerHTML = playerName
+}
