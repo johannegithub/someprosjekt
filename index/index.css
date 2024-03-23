@@ -36,7 +36,6 @@
 
 #nettmobbing div:nth-of-type(4) {
     grid-column: span 2;
-    margin-top: 30px;
 }
 
 #paragraf i, #ulovlig i {
@@ -53,6 +52,7 @@
 
 #nettmobbing div:nth-of-type(5) {
     grid-column: span 2;
+    margin-bottom: 45px;
 }
 
 #ulovlig i  {
@@ -63,11 +63,14 @@
 
 #ulovlig {
     display: none;
+    background-color: var(--secondary-color);
+    color: white;
 }
 
 #nettmobbing div {
     margin: 5px; 
-    padding: 15px; 
+    margin-bottom: 10px;
+    padding: 25px; 
 }
 
 #ressurser {
