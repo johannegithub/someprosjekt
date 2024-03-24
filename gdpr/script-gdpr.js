@@ -7,22 +7,22 @@ const cookiesLink = document.querySelector('a[href="#cookies"]');
 const privacyLink = document.querySelector('a[href="#personvern"]');
 const gdprLink = document.querySelector('a[href="#GDPR"]');
 
-arrow.addEventListener('click', function(event) {
+arrow.addEventListener('click', function (event) {
     event.preventDefault();
     toggleCookiesSection();
 });
 
-cookiesLink.addEventListener('click', function(event) {
+cookiesLink.addEventListener('click', function (event) {
     event.preventDefault();
     toggleCookiesSection();
 });
 
-privacyLink.addEventListener('click', function(event) {
+privacyLink.addEventListener('click', function (event) {
     event.preventDefault();
     scrollToSection("#personvern");
 });
 
-gdprLink.addEventListener('click', function(event) {
+gdprLink.addEventListener('click', function (event) {
     event.preventDefault();
     scrollToSection("#GDPR");
 });
@@ -49,7 +49,7 @@ function scrollToSection(sectionId, offsetAdjustment = 20) {
 }
 
 //Når man klikker på 'cookie'-lenken skal man ikke kunne lukke cookies-section, men åpne og skrolle
-cookiesLink.addEventListener('click', function(event) {
+cookiesLink.addEventListener('click', function (event) {
     event.preventDefault(); //preventer derfor togglebuttom 
     // Sjekker om cookies seksjonen er skjult
     if (cookiesSection.classList.contains("hidden")) {

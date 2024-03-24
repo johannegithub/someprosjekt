@@ -115,6 +115,7 @@ p {
     font-size: 30px;
     color: #012A4A;
 }
+
 .hidden_box i {
     color: #012A4A;
     font-size: 100px;
@@ -137,7 +138,7 @@ p {
 }
 
 .icon:not(:hover) {
-    z-index: 1; 
+    z-index: 1;
 }
 
 #icon_collection_1 {
@@ -175,6 +176,7 @@ p {
 #definition {
     font-weight: bold;
 }
+
 #personvern {
     background-color: lightcyan;
     margin: 25px 0;
@@ -218,7 +220,7 @@ p {
         font-size: 60px;
     }
 
-    .intro{
+    .intro {
         margin: 15px;
     }
 
@@ -243,7 +245,7 @@ p {
         font-size: 17px;
     }
 
-    main{
+    main {
         margin-top: 115px;
     }
 
@@ -257,6 +259,7 @@ p {
     #hero {
         padding: 255px 150px;
     }
+
     h1 {
         font-size: 40px;
     }
@@ -266,11 +269,12 @@ p {
         grid-template-rows: 300px 1fr;
         padding-bottom: 100px;
     }
+
     .hidden_box {
         width: 400px;
         padding-left: 15px;
     }
-    
+
     .hidden_box h2 {
         font-size: 20px;
     }
@@ -278,6 +282,7 @@ p {
     .hidden_box p {
         font-size: 15px;
     }
+
     .hidden_box i {
         font-size: 50px;
     }
@@ -295,6 +300,7 @@ p {
     p {
         font-size: 15px;
     }
+
     #hero {
         padding: 235px 150px;
     }

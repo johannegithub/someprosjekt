@@ -16,7 +16,7 @@ function startFunksjon() {
     });
 
     slideImg[0].classList.add("aktiv");
- 
+
     lagNavigasjonsPrikker();
 }
 

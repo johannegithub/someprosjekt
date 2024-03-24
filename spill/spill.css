@@ -277,7 +277,7 @@ i {
 }
 
 @media only screen and (max-width: 1400px) {
-  .game-boxes{
+  .game-boxes {
     margin-top: 450px;
     display: grid;
     justify-content: center;
@@ -286,7 +286,7 @@ i {
 
 @media only screen and (max-width: 1041px) {
   #hero {
-      padding: 245px 200px;
+    padding: 245px 200px;
   }
 
   .controls-container {
@@ -294,28 +294,28 @@ i {
   }
 
   .wrapper {
-    top:1130px;
+    top: 1130px;
   }
 }
 
 @media only screen and (max-width: 900px) {
 
   #hero {
-      padding: 200px 200px;
+    padding: 200px 200px;
   }
 
   h1 {
-      font-size: 55px;
-      width: auto;
+    font-size: 55px;
+    width: auto;
   }
 
   p {
-      font-size: 17px;
+    font-size: 17px;
   }
 
   main {
     margin-top: 115px;
-}
+  }
 
   .controls-container {
     top: 645px;
@@ -328,23 +328,25 @@ i {
 
 @media only screen and (max-width: 800px) {
   #hero {
-      padding: 240px 150px;
+    padding: 240px 150px;
   }
 
   h1 {
-      font-size: 40px;
+    font-size: 40px;
   }
-  
+
   main {
-      margin-top: 115px;
+    margin-top: 115px;
   }
-  
+
   h1 {
-      font-size: 50px;
+    font-size: 50px;
   }
+
   h2 {
-      font-size: 25px;
+    font-size: 25px;
   }
+
   img {
     width: 400px
   }
@@ -356,7 +358,7 @@ i {
     top: 710px;
   }
 
-.wrapper {
-  top: 1070px;
-}
+  .wrapper {
+    top: 1070px;
+  }
 }

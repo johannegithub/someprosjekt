@@ -288,7 +288,7 @@ async function saveHighscore(time, moves) {
 async function updateHighscore(time, moves) {
 
     // Hvis det ikke er noen highscore enda, eller hvis spillers poeng er bedre enn den dårligste highscoren
-    if (!highscore || highscore > time ) {
+    if (!highscore || highscore > time) {
         saveHighscore(time, moves);
     }
 }
