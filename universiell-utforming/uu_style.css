@@ -57,6 +57,7 @@ button {
     font-size: 15px;
     border-radius: 10px;
     float: right;
+    cursor: pointer;
 }
 
 section {
@@ -257,8 +258,8 @@ p {
     }
 
     button {
-        padding: 5px;
-        font-size: 10px;
+        padding: 7px;
+        font-size: 13px;
     }
 
     h2 {
