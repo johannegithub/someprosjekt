@@ -71,7 +71,6 @@ p {
     display: grid;
     grid-template-columns: 300px 500px;
     background-color: #d0f8ff;
-    padding: 0px 15px 50px 15px;
     margin-top: 70px;
 }
 
@@ -224,8 +223,7 @@ p {
 
     #cookies,
     #cookies-intro,
-    #personvern,
-    #GDPR {
+    #personvern {
         margin: 25px;
     }
 }
@@ -243,6 +241,14 @@ p {
     p {
         font-size: 17px;
     }
+
+    main{
+        margin-top: 115px;
+    }
+
+    .GDPR-intro {
+        margin: 0px 15px;
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -253,9 +259,7 @@ p {
     h1 {
         font-size: 40px;
     }
-    main {
-        margin-top: 50px;
-    }
+
     #GDPR {
         grid-template-columns: 1fr;
         grid-template-rows: 300px 1fr;
@@ -275,13 +279,6 @@ p {
     }
     .hidden_box i {
         font-size: 50px;
-    }
-    
-    h1 {
-        font-size: 50px;
-    }
-    h2 {
-        font-size: 25px;
     }
 }
 
