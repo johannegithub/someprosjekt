@@ -202,6 +202,7 @@ p {
 
 #arrow {
     height: 200px;
+    cursor: pointer;
 }
 
 .hidden {
