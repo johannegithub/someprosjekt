@@ -50,6 +50,10 @@
     color: var(--secondary-color)
 }
 
+.fa-angles-down:before {
+    cursor: pointer;
+}
+
 #nettmobbing div:nth-of-type(5) {
     grid-column: span 2;
     margin-bottom: 45px;
