@@ -50,6 +50,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    flex-direction: row;
 }
 
 .logo i {
@@ -86,11 +87,6 @@ nav {
     text-decoration: underline;
 }
 
-nav {
-    display: flex;
-    flex-direction: row;
-}
-
 .logo i {
     margin-left: 40px;
 }
@@ -98,20 +94,16 @@ nav {
 @media screen and (max-width: 760px) {
     .right-sections ul {
         background-color: #012A4A;
-        /* Legg til bakgrunnsfarge for hamburgermeny */
         position: absolute;
         top: 60px;
-        /* Juster topposisjonen etter behov */
         right: 0;
         width: 100%;
         text-align: center;
         display: none;
-        /* Skjuler lenkene i hamburgermeny som standard */
     }
 
     .right-sections ul.active {
         display: block;
-        /* Viser lenkene i hamburgermeny når den er aktivert */
     }
 
     .right-sections ul li {
@@ -121,7 +113,6 @@ nav {
 
     .nav-toggle {
         display: block;
-        /* Viser hamburgermeny-ikonet på mindre skjermer */
     }
 
     .nav-toggle {
@@ -130,8 +121,6 @@ nav {
         font-size: 24px;
         cursor: pointer;
         margin-right: 20px;
-        /* Juster avstanden etter behov */
-
     }
 }
 
