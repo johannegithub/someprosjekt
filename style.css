@@ -194,6 +194,9 @@ footer i {
     #footer h4,
     p:first-of-type {
         padding: 0px;
+    }
+
+    .om-oss {
         margin: 15px 15px;
     }
 }

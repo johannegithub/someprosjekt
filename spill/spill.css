@@ -277,36 +277,86 @@ i {
   transform: rotateY(180deg);
 }
 
+@media only screen and (max-width: 1400px) {
+  .game-boxes{
+    margin-top: 450px;
+    display: grid;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 1042px) {
+  h1 {
+      font-size: 60px;
+}
+
 @media only screen and (max-width: 1000px) {
-  .instructions {
-    margin-top: 50px;
-    width: 500px;
+  #hero {
+      padding: 245px 200px;
   }
-
-  #highscore-container {
-    margin-top: 850px;
-    width: 500px;
-  }
-
-.game-boxes {
-  display: grid;
-  justify-content: center;
-}
 }
 
-@media only screen and (max-width: 887px) {
-  .instructions {
-    margin: 30px;
-    width: 500px;
+@media only screen and (max-width: 900px) {
+
+  #hero {
+      padding: 200px 200px;
   }
 
-  #highscore-container {
-    margin-top: 750px;
-    width: 500px;
+  h1 {
+      font-size: 55px;
+      width: auto;
   }
 
-.game-boxes {
-  display: grid;
-  justify-content: center;
+  h2 {
+      font-size: 40px;
+  }
+
+  p {
+      font-size: 17px;
+  }
 }
+
+@media only screen and (max-width: 800px) {
+  #hero {
+      padding: 240px 150px;
+  }
+
+  h1 {
+      font-size: 40px;
+  }
+  main {
+      margin-top: 50px;
+  }
+  
+  h1 {
+      font-size: 50px;
+  }
+  h2 {
+      font-size: 25px;
+  }
+  img {
+    width: 400px
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+      font-size: 40px;
+  }
+
+  h2 {
+      font-size: 25px;
+  }
+
+  p {
+      font-size: 15px;
+  }
+
+  #hero {
+      padding: 210px 47px;
+  }
+
+  img {
+    width: 300px;
+    margin: 10px;
+  }
 }
