@@ -61,6 +61,7 @@ cookiesLink.addEventListener('click', function (event) {
     }
 });
 
+//Erika
 // GDPR SIKELEN
 const box_array = [
     document.getElementById("icon_box_1"),

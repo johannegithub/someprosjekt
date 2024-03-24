@@ -79,7 +79,6 @@ p {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: fit-content;
     height: 400px;
 }
 
@@ -102,6 +101,7 @@ p {
     font-size: 40px;
     color: skyblue;
     padding-bottom: 20px;
+    cursor: pointer;
 }
 
 .hidden_box {
