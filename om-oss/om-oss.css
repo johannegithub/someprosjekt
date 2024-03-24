@@ -31,7 +31,7 @@ h1 {
 
  #om-oss {
   margin-bottom: 20px;
-  margin: 80px;
+  margin: 60px 15px;
   text-align: center;
 }
 
@@ -48,7 +48,7 @@ h1 {
 }
 
 img {
-  margin: 30px;
+  margin: 30px 0px;
   width: 600px;
   border-radius: 20px;
 }
@@ -72,37 +72,78 @@ img {
   margin-top: 10px;
 }
 
+@media only screen and (max-width: 1000px) {
+  #hero {
+      padding: 200px 200px;
+  }
+
+  h1 {
+      font-size: 60px;
+  }
+
+}
+
+@media only screen and (max-width: 900px) {
+
+  #hero {
+      padding: 200px 200px;
+  }
+
+  h1 {
+      font-size: 55px;
+      width: auto;
+  }
+
+  h2 {
+      font-size: 40px;
+  }
+
+  p {
+      font-size: 17px;
+  }
+}
+
 @media only screen and (max-width: 800px) {
+  #hero {
+      padding: 230px 150px;
+  }
+
+  h1 {
+      font-size: 40px;
+  }
+  main {
+      margin-top: 50px;
+  }
+  
+  h1 {
+      font-size: 50px;
+  }
+  h2 {
+      font-size: 25px;
+  }
   img {
     width: 400px
   }
 }
 
 @media only screen and (max-width: 600px) {
-  img {
-    width: 300px
-  }
-
   h1 {
-    font-size: 40px;
+      font-size: 40px;
   }
 
   h2 {
-    font-size: 20px;
+      font-size: 25px;
   }
 
   p {
-    font-size: 12px;
+      font-size: 15px;
   }
 
-  section {
-    margin: 10px;
+  #hero {
+      padding: 210px 47px;
   }
-}
 
-
-@media only screen and (max-width: 450px) {
   img {
-    width: 250px
+    width: 300px
   }
 }
