@@ -123,6 +123,37 @@ nav {
 }
 
 
+@media only screen and (max-width: 900px) {
+    main {
+        margin-top: 200px;
+    }
+
+    div.right-sections ul li a {
+        padding: 7px;
+    }
+
+    .nav-toggle {
+        display: block;
+        color: #ffffff;
+        font-size: 24px;
+        cursor: pointer;
+        margin-right: 20px;
+        
+    }
+}
+
+@media screen and (min-width: 760px) {
+    .nav-toggle {
+        display: none;
+        /* Skjuler hamburgermeny-ikonet på større skjermer */
+    }
+
+    nav {
+        width: 100%;
+    }
+}
+
+
 /* Footer */
 footer {
     background-color: var(--primary-color);
@@ -185,35 +216,5 @@ footer i {
 
     .om-oss {
         margin: 15px 15px;
-    }
-}
-
-@media only screen and (max-width: 900px) {
-    main {
-        margin-top: 200px;
-    }
-
-    div.right-sections ul li a {
-        padding: 7px;
-    }
-
-    .nav-toggle {
-        display: block;
-        color: #ffffff;
-        font-size: 24px;
-        cursor: pointer;
-        margin-right: 20px;
-        
-    }
-}
-
-@media screen and (min-width: 760px) {
-    .nav-toggle {
-        display: none;
-        /* Skjuler hamburgermeny-ikonet på større skjermer */
-    }
-
-    nav {
-        width: 100%;
     }
 }
