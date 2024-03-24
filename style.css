@@ -16,7 +16,6 @@ main {
     margin: auto;
     margin-top: 115px;
     font-family: 'Comfortaa', sans-serif;
-
 }
 
 body {
@@ -31,7 +30,6 @@ body {
     --quinary-color: #fed9f6;
     --senary-color: #cd4883d9;
     --septenary-color: #fef0fa;
-
 }
 
 /* Nav-bar */
@@ -41,7 +39,8 @@ header {
     z-index: 2;
     top: 0;
     left: 0;
-    width: 100%;
+   width: 100%;
+   width
 }
 
 nav {
@@ -197,17 +196,15 @@ footer i {
 
     div.right-sections ul li a {
         padding: 7px;
-        font-size: 11px;
     }
 
     .nav-toggle {
         display: block;
-        /* Viser hamburgermeny-ikonet på alle skjermer */
         color: #ffffff;
         font-size: 24px;
         cursor: pointer;
         margin-right: 20px;
-        /* Juster avstanden etter behov */
+        
     }
 }
 
@@ -215,5 +212,9 @@ footer i {
     .nav-toggle {
         display: none;
         /* Skjuler hamburgermeny-ikonet på større skjermer */
+    }
+
+    nav {
+        width: 100%;
     }
 }
