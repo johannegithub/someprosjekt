@@ -39,7 +39,8 @@ header {
     z-index: 2;
     top: 0;
     left: 0;
-    width: 100%;
+   width: 100%;
+   width
 }
 
 nav {
@@ -211,5 +212,9 @@ footer i {
     .nav-toggle {
         display: none;
         /* Skjuler hamburgermeny-ikonet på større skjermer */
+    }
+
+    nav {
+        width: 100%;
     }
 }
