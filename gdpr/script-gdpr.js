@@ -36,7 +36,7 @@ function toggleCookiesSection() {
     }
 }
 
-function scrollToSection(sectionId, offsetAdjustment =20) {
+function scrollToSection(sectionId, offsetAdjustment = 20) {
     const section = document.querySelector(sectionId);
     if (section) {
         const navHeight = document.querySelector('header').offsetHeight;
