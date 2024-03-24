@@ -16,7 +16,7 @@ main {
     margin: auto;
     margin-top: 115px;
     font-family: 'Comfortaa', sans-serif;
-    
+
 }
 
 body {
@@ -25,15 +25,15 @@ body {
 
 :root {
     --primary-color: #012A4A;
-    --secondary-color:#01497C;
+    --secondary-color: #01497C;
     --tertiary-color: #61A5C2;
-    --quaternary-color:#89C2D9;
+    --quaternary-color: #89C2D9;
     --quinary-color: #fed9f6;
-    --senary-color: #cd4883d9; 
-    --septenary-color: #fef0fa; 
-  
-  }
-  
+    --senary-color: #cd4883d9;
+    --septenary-color: #fef0fa;
+
+}
+
 
 /* Nav-bar */
 
@@ -87,7 +87,7 @@ nav {
     text-decoration: underline;
 }
 
-nav{
+nav {
     display: flex;
     flex-direction: row;
 }
@@ -98,17 +98,21 @@ nav{
 
 @media screen and (max-width: 760px) {
     .right-sections ul {
-        background-color:#012A4A; /* Legg til bakgrunnsfarge for hamburgermeny */
+        background-color: #012A4A;
+        /* Legg til bakgrunnsfarge for hamburgermeny */
         position: absolute;
-        top: 60px; /* Juster topposisjonen etter behov */
+        top: 60px;
+        /* Juster topposisjonen etter behov */
         right: 0;
         width: 100%;
         text-align: center;
-        display: none; /* Skjuler lenkene i hamburgermeny som standard */
+        display: none;
+        /* Skjuler lenkene i hamburgermeny som standard */
     }
 
     .right-sections ul.active {
-        display: block; /* Viser lenkene i hamburgermeny når den er aktivert */
+        display: block;
+        /* Viser lenkene i hamburgermeny når den er aktivert */
     }
 
     .right-sections ul li {
@@ -117,7 +121,8 @@ nav{
     }
 
     .nav-toggle {
-        display: block; /* Viser hamburgermeny-ikonet på mindre skjermer */
+        display: block;
+        /* Viser hamburgermeny-ikonet på mindre skjermer */
     }
 
     .nav-toggle {
@@ -125,8 +130,9 @@ nav{
         color: #ffffff;
         font-size: 24px;
         cursor: pointer;
-        margin-right: 20px; /* Juster avstanden etter behov */
-        
+        margin-right: 20px;
+        /* Juster avstanden etter behov */
+
     }
 }
 
@@ -171,17 +177,6 @@ footer i {
     padding-top: 8px;
 }
 
-/*@media only screen and (max-width: 850px) {
-    #footer {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-    }
-    #footer div:nth-of-type(1) {
-        grid-column: span 2;
-    }
-  }
-  */
-
 
 @media only screen and (max-width: 900px) {
     #footer {
@@ -197,38 +192,37 @@ footer i {
         grid-column-end: 3;
     }
 
-    #footer h4,p:first-of-type {
+    #footer h4,
+    p:first-of-type {
         padding: 0px;
+        margin: 15px 15px;
     }
 }
 
-@media only screen and (max-width: 600px){
-    main{
+@media only screen and (max-width: 600px) {
+    main {
         margin-top: 200px;
     }
-}
 
-@media only screen and (max-width: 600px){
-    div.right-sections ul li a{
+    div.right-sections ul li a {
         padding: 7px;
         font-size: 11px;
     }
 
-}
-
-
-
-
-.nav-toggle {
-    display: block; /* Viser hamburgermeny-ikonet på alle skjermer */
-    color: #ffffff;
-    font-size: 24px;
-    cursor: pointer;
-    margin-right: 20px; /* Juster avstanden etter behov */
+    .nav-toggle {
+        display: block;
+        /* Viser hamburgermeny-ikonet på alle skjermer */
+        color: #ffffff;
+        font-size: 24px;
+        cursor: pointer;
+        margin-right: 20px;
+        /* Juster avstanden etter behov */
+    }
 }
 
 @media screen and (min-width: 760px) {
     .nav-toggle {
-        display: none; /* Skjuler hamburgermeny-ikonet på større skjermer */
+        display: none;
+        /* Skjuler hamburgermeny-ikonet på større skjermer */
     }
 }

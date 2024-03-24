@@ -43,11 +43,47 @@ function scrollToSection(sectionId) {
 }
 
 // GDPR SIKELEN
-let ikon_array = [icon_collection_1, icon_collection_2, icon_collection_3, icon_collection_4, icon_collection_5, icon_collection_6, icon_collection_7, icon_collection_8]
-let ikoner = document.querySelectorAll(".icon")
+const box_array = [
+    document.getElementById("icon_box_1"),
+    document.getElementById("icon_box_2"),
+    document.getElementById("icon_box_3"),
+    document.getElementById("icon_box_4"),
+    document.getElementById("icon_box_5"),
+    document.getElementById("icon_box_6"),
+    document.getElementById("icon_box_7"),
+    document.getElementById("icon_box_8")
+];
 
-document.ikoner.addEventListener("click", hoverIkoner)
+const icon_array = [
+    document.getElementById("icon_collection_1"),
+    document.getElementById("icon_collection_2"),
+    document.getElementById("icon_collection_3"),
+    document.getElementById("icon_collection_4"),
+    document.getElementById("icon_collection_5"),
+    document.getElementById("icon_collection_6"),
+    document.getElementById("icon_collection_7"),
+    document.getElementById("icon_collection_8")
+];
 
-function hoverIkoner() {
-    document.ikoner.style.color = "red"
+// går gjennom hvert element i icon_array, og for hvert element i arrayen utføres en funksjon
+icon_array.forEach((icon, x) => {
+    icon.addEventListener("mouseover", () => {
+        hoverIkoner(x);
+    });
+
+    icon.addEventListener("mouseout", () => {
+        avIkoner(x);
+    });
+});
+
+function hoverIkoner(x) {
+    box_array[x].classList.add("active_box");
+    icon_array[x].style.color = "#012A4A";
+    icon_array[x].style.fontSize = "50px";
+}
+
+function avIkoner(x) {
+    box_array[x].classList.remove("active_box");
+    icon_array[x].style.color = "skyblue";
+    icon_array[x].style.fontSize = "40px";
 }

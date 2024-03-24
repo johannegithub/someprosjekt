@@ -52,7 +52,7 @@ h1 {
     font-size: 65px;
     text-align: center;
     text-shadow: 3px 3px 3px grey;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 40%);
     color: rgb(255, 255, 255);
     font-family: 'Comfortaa', sans-serif;
     width: 500px;
@@ -69,7 +69,10 @@ p {
 
 #GDPR {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 300px 500px;
+    background-color: #d0f8ff;
+    padding: 0px 15px 50px 15px;
+    margin-top: 70px;
 }
 
 #GDPR_sirkel {
@@ -78,7 +81,7 @@ p {
     justify-content: center;
     align-items: center;
     height: fit-content;
-    height: 500px;
+    height: 400px;
 }
 
 #main-image {
@@ -106,7 +109,7 @@ p {
     display: none;
     width: 500px;
     padding-left: 50px;
-    padding-top: 150px;
+    padding-top: 110px;
 }
 
 .hidden_box h2 {
@@ -127,6 +130,11 @@ p {
 
 .active_box {
     display: block;
+}
+
+.active_icon {
+    color: #012A4A;
+    font-size: 50px;
 }
 
 .icon:not(:hover) {
@@ -165,20 +173,18 @@ p {
     transform: rotate(0deg) translateY(-80px);
 }
 
-
 #definition {
     font-weight: bold;
 }
-
 #personvern {
     background-color: lightcyan;
-    margin: 60px 0px;
+    margin: 25px 0;
     padding: 50px;
 }
 
 #cookies-intro {
     background-color: var(--quinary-color);
-    margin: 15px 0px;
+    margin: 15px 0;
     padding: 50px;
 }
 
@@ -192,7 +198,7 @@ p {
     background-color: beige;
     padding: 50px;
     max-width: 800px;
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 #arrow {
@@ -201,5 +207,102 @@ p {
 
 .hidden {
     display: none;
-    /* Skjul elementer med denne klassen */
+}
+
+@media only screen and (max-width: 1000px) {
+    #hero {
+        padding: 200px 200px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    .intro{
+        margin: 15px;
+    }
+
+    #cookies,
+    #cookies-intro,
+    #personvern {
+        margin: 25px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    #hero {
+        padding: 200px 200px;
+    }
+
+    h1 {
+        font-size: 55px;
+        width: auto;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #hero {
+        padding: 230px 150px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+    main {
+        margin-top: 50px;
+    }
+    #GDPR {
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px 1fr;
+        padding-bottom: 100px;
+    }
+    .hidden_box {
+        width: 400px;
+        padding-left: 15px;
+    }
+    
+    .hidden_box h2 {
+        font-size: 20px;
+    }
+
+    .hidden_box p {
+        font-size: 15px;
+    }
+    .hidden_box i {
+        font-size: 50px;
+    }
+    
+    h1 {
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    #hero {
+        padding: 210px 47px;
+    }
 }
