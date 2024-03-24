@@ -68,7 +68,7 @@ nav {
 
 .right-sections ul {
     list-style-type: none;
-    margin-right: 40px;
+    margin-right: 0px;
     font-family: 'Comfortaa', sans-serif;
 }
 
@@ -190,7 +190,7 @@ footer i {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
     main {
         margin-top: 200px;
     }
