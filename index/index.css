@@ -91,6 +91,7 @@
 #ressurser img {
     height: 120px; 
     align-content: center;
+    border-radius: 20px;
 }
 
 #ressurser a {

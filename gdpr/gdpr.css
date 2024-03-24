@@ -224,7 +224,8 @@ p {
 
     #cookies,
     #cookies-intro,
-    #personvern {
+    #personvern,
+    #GDPR {
         margin: 25px;
     }
 }
