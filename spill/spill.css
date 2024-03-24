@@ -220,7 +220,6 @@ img {
 i {
   font-size: 100px;
   text-align: center;
-  padding: 10px;
 }
 
 #fenomen_section p {
@@ -283,10 +282,6 @@ i {
     display: grid;
     justify-content: center;
   }
-}
-@media only screen and (max-width: 1042px) {
-  h1 {
-      font-size: 60px;
 }
 
 @media only screen and (max-width: 1000px) {
