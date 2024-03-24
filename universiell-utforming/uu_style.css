@@ -143,6 +143,18 @@ p {
     text-align: center;
 }
 
+.fa-eye:before {
+    cursor: pointer;
+}
+
+.fa-circle-half-stroke:before {
+    cursor: pointer;
+}
+
+.fa-headphones:before {
+    cursor: pointer;
+}
+
 #syn {
     /*color: rgb(90, 155, 230);*/
     color: var(--secondary-color);
