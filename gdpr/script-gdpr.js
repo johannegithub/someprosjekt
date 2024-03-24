@@ -1,46 +1,65 @@
 //Amina
 // Henter elementer fra DOM
-const arrow = document.getElementById("arrow");
+
 const cookiesSection = document.getElementById("cookies");
+const arrow = document.getElementById("arrow");
 const cookiesLink = document.querySelector('a[href="#cookies"]');
 const privacyLink = document.querySelector('a[href="#personvern"]');
+const gdprLink = document.querySelector('a[href="#GDPR"]');
 
-// Vis cookies-seksjonen ved click
-arrow.addEventListener("click", cookiesToggle);
+arrow.addEventListener('click', function(event) {
+    event.preventDefault();
+    toggleCookiesSection();
+});
 
-function cookiesToggle() {
+cookiesLink.addEventListener('click', function(event) {
+    event.preventDefault();
+    toggleCookiesSection();
+});
+
+privacyLink.addEventListener('click', function(event) {
+    event.preventDefault();
+    scrollToSection("#personvern");
+});
+
+gdprLink.addEventListener('click', function(event) {
+    event.preventDefault();
+    scrollToSection("#GDPR");
+});
+
+function toggleCookiesSection() {
     if (cookiesSection.classList.contains("hidden")) {
         cookiesSection.classList.remove("hidden");
-        scrollToSection("cookies"); // Åpne og rull til cookies-seksjonen hvis den er skjult
+        scrollToSection("#cookies");
     } else {
         cookiesSection.classList.add("hidden");
     }
 }
 
-// Scroller til cookies-seksjonen når lenken klikkes
-cookiesLink.addEventListener('click', function(event) {
-    event.preventDefault(); // For å unngå at lenken ruller siden til toppen
-    if (cookiesSection.classList.contains("hidden")) { // Hvis skjult - åpne og scroll 
-        cookiesSection.classList.remove("hidden");
-        scrollToSection("cookies");
-    } else {
-        scrollToSection("cookies"); // Hvis allere åpen - scroll
-    }
-});
-
-// Scroller til personvern-seksjon når lenken klikkes
-privacyLink.addEventListener('click', function(event) {
-    event.preventDefault(); // For å unngå at lenken ruller siden til toppen
-    scrollToSection("personvern");
-});
-
-// Funk. for å rulle til bestemt section
-function scrollToSection(sectionId) {
-    let section = document.getElementById(sectionId);
+function scrollToSection(sectionId, offsetAdjustment =20) {
+    const section = document.querySelector(sectionId);
     if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
+        const navHeight = document.querySelector('header').offsetHeight;
+        const offset = navHeight + offsetAdjustment;
+        window.scrollTo({
+            top: section.offsetTop - offset,
+            behavior: "smooth"
+        });
     }
 }
+
+//Når man klikker på 'cookie'-lenken skal man ikke kunne lukke cookies-section, men åpne og skrolle
+cookiesLink.addEventListener('click', function(event) {
+    event.preventDefault(); //preventer derfor togglebuttom 
+    // Sjekker om cookies seksjonen er skjult
+    if (cookiesSection.classList.contains("hidden")) {
+        // Hvis den er skjult, åpne den og rull til cookies seksjonen
+        toggleCookiesSection();
+    } else {
+        // Hvis den allerede er åpen, bare rull til cookies seksjonen
+        scrollToSection("#cookies");
+    }
+});
 
 // GDPR SIKELEN
 const box_array = [
