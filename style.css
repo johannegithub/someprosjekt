@@ -195,6 +195,7 @@ footer i {
     #footer h4,
     p:first-of-type {
         padding: 0px;
+        margin: 15px 15px;
     }
 }
 

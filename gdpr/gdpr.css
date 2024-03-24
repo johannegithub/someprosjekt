@@ -211,3 +211,37 @@ p {
     display: none;
     /* Skjul elementer med denne klassen */
 }
+
+
+@media screen and (max-width: 800px) {
+    main {
+        margin-top: 50px;
+    }
+    #GDPR {
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px 1fr;
+        padding-bottom: 100px;
+    }
+    .hidden_box {
+        width: 400px;
+        padding-left: 15px;
+    }
+    
+    .hidden_box h2 {
+        font-size: 20px;
+    }
+
+    .hidden_box p {
+        font-size: 15px;
+    }
+    .hidden_box i {
+        font-size: 50px;
+    }
+    
+    h1 {
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+}
